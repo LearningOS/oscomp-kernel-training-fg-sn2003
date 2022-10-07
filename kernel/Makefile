@@ -104,9 +104,9 @@ clean:
 kernel_elf: 
 	@cp ./linker/linker-$(BOARD).ld ./linker/linker.ld
 ifeq ($(MODE),debug)
-	@cargo build --offline --features "$(FEATURES)"
+	@cargo build --features "$(FEATURES)"
 else
-	@cargo build --offline --release --features "$(FEATURES)"
+	@cargo build --release --features "$(FEATURES)"
 endif
 
 $(KERNEL_BIN): kernel_elf

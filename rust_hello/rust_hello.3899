@@ -1,0 +1,364 @@
+gettid()                                = 3899
+rt_sigprocmask(SIG_SETMASK, ~[KILL STOP RTMIN RT_1 RT_2], NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+close(9)                                = 0
+dup2(6, 1)                              = 1
+dup2(8, 2)                              = 2
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGPIPE, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f847a1d2c9f}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f847a1d2c9f}, 8) = 0
+execve("/usr/lib/rustlib/x86_64-alpine-linux-musl/bin/cc", ["cc", "-m64", "/tmp/rustcSyByve/symbols.o", "hello.hello.62344b53-cgu.0.rcgu."..., "hello.hello.62344b53-cgu.1.rcgu."..., "hello.hello.62344b53-cgu.2.rcgu."..., "hello.hello.62344b53-cgu.3.rcgu."..., "hello.hello.62344b53-cgu.4.rcgu."..., "hello.hello.62344b53-cgu.5.rcgu."..., "hello.hello.62344b53-cgu.6.rcgu."..., "hello.hello.62344b53-cgu.7.rcgu."..., "hello.377qbl7f5a1jw27.rcgu.o", "-Wl,--as-needed", "-L", "/usr/lib/rustlib/x86_64-alpine-l"..., "-Wl,--start-group", "-Wl,-Bstatic", "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., ...], 0x7f8468e13e20 /* 47 vars */) = -1 ENOENT (No such file or directory)
+execve("/usr/local/sbin/cc", ["cc", "-m64", "/tmp/rustcSyByve/symbols.o", "hello.hello.62344b53-cgu.0.rcgu."..., "hello.hello.62344b53-cgu.1.rcgu."..., "hello.hello.62344b53-cgu.2.rcgu."..., "hello.hello.62344b53-cgu.3.rcgu."..., "hello.hello.62344b53-cgu.4.rcgu."..., "hello.hello.62344b53-cgu.5.rcgu."..., "hello.hello.62344b53-cgu.6.rcgu."..., "hello.hello.62344b53-cgu.7.rcgu."..., "hello.377qbl7f5a1jw27.rcgu.o", "-Wl,--as-needed", "-L", "/usr/lib/rustlib/x86_64-alpine-l"..., "-Wl,--start-group", "-Wl,-Bstatic", "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., ...], 0x7f8468e13e20 /* 47 vars */) = -1 ENOENT (No such file or directory)
+execve("/usr/local/bin/cc", ["cc", "-m64", "/tmp/rustcSyByve/symbols.o", "hello.hello.62344b53-cgu.0.rcgu."..., "hello.hello.62344b53-cgu.1.rcgu."..., "hello.hello.62344b53-cgu.2.rcgu."..., "hello.hello.62344b53-cgu.3.rcgu."..., "hello.hello.62344b53-cgu.4.rcgu."..., "hello.hello.62344b53-cgu.5.rcgu."..., "hello.hello.62344b53-cgu.6.rcgu."..., "hello.hello.62344b53-cgu.7.rcgu."..., "hello.377qbl7f5a1jw27.rcgu.o", "-Wl,--as-needed", "-L", "/usr/lib/rustlib/x86_64-alpine-l"..., "-Wl,--start-group", "-Wl,-Bstatic", "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., ...], 0x7f8468e13e20 /* 47 vars */) = -1 ENOENT (No such file or directory)
+execve("/usr/sbin/cc", ["cc", "-m64", "/tmp/rustcSyByve/symbols.o", "hello.hello.62344b53-cgu.0.rcgu."..., "hello.hello.62344b53-cgu.1.rcgu."..., "hello.hello.62344b53-cgu.2.rcgu."..., "hello.hello.62344b53-cgu.3.rcgu."..., "hello.hello.62344b53-cgu.4.rcgu."..., "hello.hello.62344b53-cgu.5.rcgu."..., "hello.hello.62344b53-cgu.6.rcgu."..., "hello.hello.62344b53-cgu.7.rcgu."..., "hello.377qbl7f5a1jw27.rcgu.o", "-Wl,--as-needed", "-L", "/usr/lib/rustlib/x86_64-alpine-l"..., "-Wl,--start-group", "-Wl,-Bstatic", "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., ...], 0x7f8468e13e20 /* 47 vars */) = -1 ENOENT (No such file or directory)
+execve("/usr/bin/cc", ["cc", "-m64", "/tmp/rustcSyByve/symbols.o", "hello.hello.62344b53-cgu.0.rcgu."..., "hello.hello.62344b53-cgu.1.rcgu."..., "hello.hello.62344b53-cgu.2.rcgu."..., "hello.hello.62344b53-cgu.3.rcgu."..., "hello.hello.62344b53-cgu.4.rcgu."..., "hello.hello.62344b53-cgu.5.rcgu."..., "hello.hello.62344b53-cgu.6.rcgu."..., "hello.hello.62344b53-cgu.7.rcgu."..., "hello.377qbl7f5a1jw27.rcgu.o", "-Wl,--as-needed", "-L", "/usr/lib/rustlib/x86_64-alpine-l"..., "-Wl,--start-group", "-Wl,-Bstatic", "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., "/usr/lib/rustlib/x86_64-alpine-l"..., ...], 0x7f8468e13e20 /* 47 vars */) = 0
+arch_prctl(ARCH_SET_FS, 0x7fb64acceb48) = 0
+set_tid_address(0x7fb64accefb0)         = 3899
+brk(NULL)                               = 0x12f4000
+brk(0x12f6000)                          = 0x12f6000
+mmap(0x12f4000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x12f4000
+mprotect(0x7fb64accb000, 4096, PROT_READ) = 0
+mprotect(0x507000, 241664, PROT_READ)   = 0
+mmap(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac26000
+brk(NULL)                               = 0x12f6000
+mmap(NULL, 69632, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac15000
+mmap(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac11000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac10000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac0f000
+ioctl(2, TIOCGWINSZ, 0x7ffebe222518)    = -1 ENOTTY (Not a tty)
+ioctl(2, TIOCGWINSZ, 0x7ffebe222538)    = -1 ENOTTY (Not a tty)
+ioctl(2, TIOCGWINSZ, 0x7ffebe222528)    = -1 ENOTTY (Not a tty)
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RT_1 RT_2], NULL, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x4096a0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=0x4096a0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x4096a0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, 8) = 0
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPIPE, {sa_handler=0x4096a0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fb64ac7ec9f}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_STACK, {rlim_cur=65536*1024, rlim_max=RLIM64_INFINITY}, NULL) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac0e000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac0d000
+access("/usr/lib/rustlib/x86_64-alpine-linux-musl/bin/cc", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/sbin/cc", X_OK)      = -1 ENOENT (No such file or directory)
+access("/usr/local/bin/cc", X_OK)       = -1 ENOENT (No such file or directory)
+access("/usr/sbin/cc", X_OK)            = -1 ENOENT (No such file or directory)
+access("/usr/bin/cc", X_OK)             = 0
+stat("/usr/bin/cc", {st_mode=S_IFREG|0755, st_size=1320096, ...}) = 0
+readlink("/usr", 0x7ffebe2201ff, 4089)  = -1 EINVAL (Invalid argument)
+readlink("/usr/bin", 0x7ffebe2201ff, 4093) = -1 EINVAL (Invalid argument)
+readlink("/usr/bin/cc", "gcc", 4096)    = 3
+readlink("/usr/bin/gcc", 0x7ffebe2201ff, 4096) = -1 EINVAL (Invalid argument)
+access("/usr/lib/rustlib/x86_64-alpine-linux-musl/bin/cc", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/sbin/cc", X_OK)      = -1 ENOENT (No such file or directory)
+access("/usr/local/bin/cc", X_OK)       = -1 ENOENT (No such file or directory)
+access("/usr/sbin/cc", X_OK)            = -1 ENOENT (No such file or directory)
+access("/usr/bin/cc", X_OK)             = 0
+stat("/usr/bin/cc", {st_mode=S_IFREG|0755, st_size=1320096, ...}) = 0
+readlink("/usr", 0x7ffebe2201ff, 4089)  = -1 EINVAL (Invalid argument)
+readlink("/usr/bin", 0x7ffebe2201ff, 4093) = -1 EINVAL (Invalid argument)
+readlink("/usr/bin/cc", "gcc", 4096)    = 3
+readlink("/usr/bin/gcc", 0x7ffebe2201ff, 4096) = -1 EINVAL (Invalid argument)
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac0c000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac0b000
+munmap(0x7fb64ac0c000, 4096)            = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac09000
+munmap(0x7fb64ac0b000, 4096)            = 0
+readlink("/tmp", 0x7ffebe22039f, 4074)  = -1 EINVAL (Invalid argument)
+readlink("/tmp/rustcSyByve", 0x7ffebe22039f, 4086) = -1 EINVAL (Invalid argument)
+readlink("/tmp/rustcSyByve/symbols.o", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello.hello.62344b53-cgu.0.rcgu.o", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello.hello.62344b53-cgu.1.rcgu.o", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello.hello.62344b53-cgu.2.rcgu.o", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello.hello.62344b53-cgu.3.rcgu.o", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello.hello.62344b53-cgu.4.rcgu.o", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello.hello.62344b53-cgu.5.rcgu.o", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello.hello.62344b53-cgu.6.rcgu.o", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello.hello.62344b53-cgu.7.rcgu.o", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello.377qbl7f5a1jw27.rcgu.o", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4026)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4030) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4038) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4063) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4067) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libstd-13704e8e0399b9d1.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4017)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4021) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4029) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4054) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4058) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libpanic_unwind-6856b0fdb57f2b0b.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4023)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4027) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4035) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4060) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4064) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libobject-d6df8f0282bc7098.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4023)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4027) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4035) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4060) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4064) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libmemchr-973fd49984a04475.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4020)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4024) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4032) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4057) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4061) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libaddr2line-1e125e6ce3ddf4f5.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4024)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4028) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4036) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4061) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4065) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libgimli-e280729a23db4dc7.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4015)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4019) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4027) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4052) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4056) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/librustc_demangle-4383f26323ef49e7.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4019)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4023) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4031) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4056) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4060) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libstd_detect-7fc28190cd01a9d8.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4020)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4024) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4032) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4057) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4061) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libhashbrown-c9a9746500569a2a.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4018)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4022) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4030) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4055) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4059) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libminiz_oxide-aa25e0313a6394d0.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4024)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4028) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4036) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4061) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4065) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libadler-9b2823fb1d260b86.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4004)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4008) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4016) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4041) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4045) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/librustc_std_workspace_alloc-b7ccd3231db08dc5.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4023)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4027) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4035) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4060) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4064) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libunwind-2f34c3e20d4d1a3e.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4023)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4027) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4035) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4060) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4064) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libcfg_if-09d0569e797e48a5.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4025)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4029) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4037) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4062) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4066) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/liblibc-c34381a63e2e4bab.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4024)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4028) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4036) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4061) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4065) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/liballoc-f4be2f37ad8b95d5.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4005)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4009) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4017) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4042) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4046) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/librustc_std_workspace_core-ba9c864ba54a8d65.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4025)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4029) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4037) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4062) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4066) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libcore-5976c69f824d055e.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+readlink("/usr", 0x7ffebe22039f, 4012)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffebe22039f, 4016) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib", 0x7ffebe22039f, 4024) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl", 0x7ffebe22039f, 4049) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib", 0x7ffebe22039f, 4053) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/rustlib/x86_64-alpine-linux-musl/lib/libcompiler_builtins-3f8b30255bd06f5f.rlib", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+readlink("hello", 0x7ffebe22039f, 4096) = -1 EINVAL (Invalid argument)
+getcwd("/root", 4097)                   = 6
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/", X_OK) = 0
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/", X_OK) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac0c000
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/specs", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/x86_64-alpine-linux-musl/12.1.1/specs", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/specs", R_OK) = -1 ENOENT (No such file or directory)
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac0b000
+munmap(0x7fb64ac0b000, 4096)            = 0
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/specs", R_OK) = -1 ENOENT (No such file or directory)
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac0b000
+munmap(0x7fb64ac0b000, 4096)            = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac0b000
+munmap(0x7fb64ac0b000, 4096)            = 0
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/", X_OK) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac0b000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac08000
+stat("/usr/libexec/gcc/x86_64-alpine-linux-musl/12.1.1/lto-wrapper", {st_mode=S_IFREG|0755, st_size=1198720, ...}) = 0
+access("/usr/libexec/gcc/x86_64-alpine-linux-musl/12.1.1/lto-wrapper", X_OK) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac07000
+stat("/usr/libexec/gcc/x86_64-alpine-linux-musl/12.1.1/collect2", {st_mode=S_IFREG|0755, st_size=666144, ...}) = 0
+access("/usr/libexec/gcc/x86_64-alpine-linux-musl/12.1.1/collect2", X_OK) = 0
+access("/usr/libexec/gcc/x86_64-alpine-linux-musl/12.1.1/liblto_plugin.so", R_OK) = 0
+stat("/usr/libexec/gcc/x86_64-alpine-linux-musl/12.1.1/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/libexec/gcc/x86_64-alpine-linux-musl/12.1.1/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/libexec/gcc/x86_64-alpine-linux-musl/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/bin/x86_64-alpine-linux-musl/12.1.1/.", 0x7ffebe2221d0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/bin/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/x86_64-alpine-linux-musl/12.1.1/.", 0x7ffebe2221d0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/../lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../x86_64-alpine-linux-musl/12.1.1/.", 0x7ffebe2221f0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/lib/x86_64-alpine-linux-musl/12.1.1/.", 0x7ffebe222230) = -1 ENOENT (No such file or directory)
+stat("/lib/../lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/x86_64-alpine-linux-musl/12.1.1/.", 0x7ffebe222220) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/../lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac06000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac04000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac02000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64ac00000
+access("/tmp", R_OK|W_OK|X_OK)          = 0
+stat("/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, ...}) = 0
+open("/tmp/ccjJlEOI.res", O_RDWR|O_CREAT|O_EXCL|O_LARGEFILE, 0600) = 3
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64abff000
+munmap(0x7fb64abff000, 4096)            = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64abff000
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/Scrt1.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/x86_64-alpine-linux-musl/12.1.1/Scrt1.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/../lib/Scrt1.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../x86_64-alpine-linux-musl/12.1.1/Scrt1.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../lib/Scrt1.o", R_OK) = 0
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/crti.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/x86_64-alpine-linux-musl/12.1.1/crti.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/../lib/crti.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../x86_64-alpine-linux-musl/12.1.1/crti.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../lib/crti.o", R_OK) = 0
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/crtbeginS.o", R_OK) = 0
+munmap(0x7fb64abff000, 4096)            = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/x86_64-alpine-linux-musl/12.1.1/.", 0x7ffebe220e80) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/../lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../x86_64-alpine-linux-musl/12.1.1/.", 0x7ffebe220ea0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/lib/x86_64-alpine-linux-musl/12.1.1/.", 0x7ffebe220ee0) = -1 ENOENT (No such file or directory)
+stat("/lib/../lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/x86_64-alpine-linux-musl/12.1.1/.", 0x7ffebe220ed0) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/../lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../.", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64abff000
+munmap(0x7fb64abff000, 4096)            = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb64abff000
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/crtendS.o", R_OK) = 0
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/crtn.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/x86_64-alpine-linux-musl/12.1.1/crtn.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../x86_64-alpine-linux-musl/lib/../lib/crtn.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../x86_64-alpine-linux-musl/12.1.1/crtn.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-alpine-linux-musl/12.1.1/../../../../lib/crtn.o", R_OK) = 0
+stat("/usr/libexec/gcc/x86_64-alpine-linux-musl/12.1.1/collect2", {st_mode=S_IFREG|0755, st_size=666144, ...}) = 0
+access("/usr/libexec/gcc/x86_64-alpine-linux-musl/12.1.1/collect2", X_OK) = 0
+pipe2([3, 4], O_CLOEXEC)                = 0
+vfork()                                 = 3900
+close(4)                                = 0
+read(3, "", 16)                         = 0
+close(3)                                = 0
+wait4(3900, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 3900
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3900, si_uid=0, si_status=0, si_utime=0, si_stime=1 /* 0.01 s */} ---
+munmap(0x7fb64ac00000, 8192)            = 0
+munmap(0x7fb64ac02000, 8192)            = 0
+munmap(0x7fb64ac04000, 8192)            = 0
+munmap(0x7fb64ac06000, 4096)            = 0
+stat("/tmp/ccjJlEOI.res", {st_mode=S_IFREG|0600, st_size=0, ...}) = 0
+unlink("/tmp/ccjJlEOI.res")             = 0
+munmap(0x7fb64ac11000, 16384)           = 0
+exit_group(0)                           = ?
++++ exited with 0 +++

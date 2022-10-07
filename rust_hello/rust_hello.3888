@@ -1,0 +1,47 @@
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8468b28000
+mprotect(0x7f8468b28000, 4096, PROT_NONE) = 0
+sigaltstack({ss_sp=0x7f8468b29000, ss_flags=0, ss_size=8192}, NULL) = 0
+futex(0x7f8468e4bf28, FUTEX_WAIT_BITSET_PRIVATE, 0, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+read(3, "|", 1)                         = 1
+futex(0x7f8468e4bf28, FUTEX_WAIT_BITSET_PRIVATE, 1, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+read(3, "|", 1)                         = 1
+futex(0x7f847a222fdc, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7f847a222fdc, FUTEX_WAIT_PRIVATE, 2147483650, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0x7f8468e4bf28, FUTEX_WAIT_BITSET_PRIVATE, 2, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+read(3, "|", 1)                         = 1
+futex(0x7f847a222fdc, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7f847a222fdc, FUTEX_WAIT_PRIVATE, 2147483652, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0x7f8468e4bf28, FUTEX_WAIT_BITSET_PRIVATE, 3, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+read(3, "|", 1)                         = 1
+futex(0x7f847a222fdc, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7f847a222fdc, FUTEX_WAIT_PRIVATE, 2147483652, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0x7f847a222fdc, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7f8468e4bf28, FUTEX_WAIT_BITSET_PRIVATE, 4, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+read(3, "|", 1)                         = 1
+futex(0x7f8468e4bf28, FUTEX_WAIT_BITSET_PRIVATE, 5, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+read(3, "|", 1)                         = 1
+futex(0x7f8468e4bf28, FUTEX_WAIT_BITSET_PRIVATE, 6, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+read(3, "|", 1)                         = 1
+futex(0x7f847a222fdc, FUTEX_WAIT_PRIVATE, 2147483650, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0x7f8468e4bf28, FUTEX_WAIT_BITSET_PRIVATE, 7, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+read(3, "|", 1)                         = 1
+futex(0x7f847a222fdc, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7f847a222fdc, FUTEX_WAIT_PRIVATE, 2147483652, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0x7f8468e4bf28, FUTEX_WAIT_BITSET_PRIVATE, 8, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+read(3, "|", 1)                         = 1
+futex(0x7f847a222fdc, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7f847a222fdc, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7f8468e4bf28, FUTEX_WAIT_BITSET_PRIVATE, 9, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0x7f8468e4bf10, FUTEX_WAIT_BITSET_PRIVATE, 2, NULL, FUTEX_BITSET_MATCH_ANY) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGUSR1 {si_signo=SIGUSR1, si_code=SI_TKILL, si_pid=3886, si_uid=0} ---
+rt_sigreturn({mask=[]})                 = -1 EINTR (Interrupted system call)
+futex(0x7f8468e4bf28, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7f8468e4bf10, FUTEX_WAKE_PRIVATE, 1) = 0
+sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0
+munmap(0x7f8468b28000, 12288)           = 0
+rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+futex(0x7f8468d2fb70, FUTEX_WAKE_PRIVATE, 1) = 1
+exit(0)                                 = ?
++++ exited with 0 +++

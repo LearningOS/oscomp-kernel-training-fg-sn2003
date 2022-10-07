@@ -1,0 +1,13 @@
+/home/stellaris/operation_system/oskernel2022-oops/kernel/target/riscv64gc-unknown-none-elf/debug/deps/virtio_drivers-faf0277e27977759.rmeta: /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/lib.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/blk.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/console.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/gpu.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/hal.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/header.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/input.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/net.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/queue.rs
+
+/home/stellaris/operation_system/oskernel2022-oops/kernel/target/riscv64gc-unknown-none-elf/debug/deps/virtio_drivers-faf0277e27977759.d: /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/lib.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/blk.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/console.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/gpu.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/hal.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/header.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/input.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/net.rs /home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/queue.rs
+
+/home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/lib.rs:
+/home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/blk.rs:
+/home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/console.rs:
+/home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/gpu.rs:
+/home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/hal.rs:
+/home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/header.rs:
+/home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/input.rs:
+/home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/net.rs:
+/home/stellaris/.cargo/git/checkouts/virtio-drivers-4fdfaa862bcdc399/3b24d36/src/queue.rs:

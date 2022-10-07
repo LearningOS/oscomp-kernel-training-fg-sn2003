@@ -1,0 +1,1 @@
+{"buildTargets":["build","clean","debug","debug_remote","elf","env","kernel_elf","run","sdcard","target/riscv64gc-unknown-none-elf/release/kernel.bin","user_bin"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

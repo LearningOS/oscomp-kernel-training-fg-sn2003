@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/sn2003/os/kernel'
+echo "Are you sure write to /dev/sdc ? [y/N] " && read ans && [ ${ans:-N} = y ]
+sudo dd if=/dev/zero of=/dev/sdc bs=1048576 count=32
+sudo dd if=../disk.img of=/dev/sdc
+make: Leaving directory '/home/sn2003/os/kernel'
+ 

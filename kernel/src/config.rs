@@ -3,7 +3,7 @@ pub const TICKS_PER_SEC: usize = 10;
 /* MEMORY */
 pub const USER_STACK_SIZE: usize = 4096 * 256;
 pub const KERNEL_STACK_SIZE: usize = 4096 * 32;
-pub const KERNEL_HEAP_SIZE: usize = 0x160_000;
+pub const KERNEL_HEAP_SIZE: usize = 0x1_000_000;
 pub const MEMORY_END: usize = 0x90_000_000;  
 pub const PAGE_SIZE: usize = 4096;
 pub const PAGE_BITS_WIDTH: usize = 12;

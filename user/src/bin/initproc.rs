@@ -55,10 +55,12 @@ fn sh() {
 
 fn final_comp() {
     //libc_test();
-    //run_libc_testcode();
-    //run_lua_testcode();
-    //run_busybox_testcode();
-    run_lmbench_testcode();
+    run_libc_testcode();
+    run_lua_testcode();
+    run_busybox_testcode();
+    run_lmbench_remain_tests();
+    lmbench_proxy();
+    //run_lmbench_testcode();
 }
 
 fn run_libc_testcode() {
@@ -116,46 +118,17 @@ fn run_lmbench_testcode() {
 }
 
 fn run_lmbench_remain_tests() {
+    //lmbench_all lmdd label=\"File /var/tmp/XXX write bandwidth:\" of=/var/tmp/XXX move=1m fsync=1 print=3
     let pid = fork();
     if pid == 0 {
-        exec("lmbench_all\0", vec!("lmbench_all\0", "lat_ctx\0", "-P\0", "1\0", "-s\0", "32\0", "2\0", "4\0","8\0","16\0","24\0","32\0","64\0","96\0"), Vec::new());
+        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_ctx\0", "-P\0", "1\0", "-s\0", "32\0", "2\0", "4\0","8\0","16\0","24\0","32\0","64\0","96\0"), Vec::new());
+        exec("lmbench_all\0", vec!("lmbench_all\0", "lmdd\0", "label=\"File /var/tmp/XXX write bandwidth:\"", "of=/var/tmp/XXX\0", "move=1m\0", "fsync=1\0", "print=3\0"), Vec::new());
+
     } else {
         let mut status: i32 = 0;
         wait(&mut status);
     }
     
-    // let pid = fork();
-    // if pid == 0 {
-    //     exec("lmbench_all\0", vec!("lmbench_all\0", "bw_pipe\0", "-P\0", "1\0"), Vec::new());
-    // } else {
-    //     let mut status: i32 = 0;
-    //     wait(&mut status);
-    // }
-
-    let pid = fork();
-    if pid == 0 {
-        exec("lmbench_all\0", vec!("lmbench_all\0", "bw_file_rd\0", "-P\0", "1\0", "512k\0", "io_only\0", "/var/tmp/XXX\0"), Vec::new());
-    } else {
-        let mut status: i32 = 0;
-        wait(&mut status);
-    }
-
-    let pid = fork();
-    if pid == 0 {
-        exec("lmbench_all\0", vec!("lmbench_all\0", "bw_file_rd\0", "-P\0", "1\0", "512k\0", "open2close\0", "/var/tmp/XXX\0"), Vec::new());
-    } else {
-        let mut status: i32 = 0;
-        wait(&mut status);
-    }
-
-    let pid = fork();
-    if pid == 0 {
-        exec("lmbench_all\0", vec!("lmbench_all\0", "bw_mmap_rd\0", "-P\0", "1\0", "512k\0", "mmap_only\0", "/var/tmp/XXX\0"), Vec::new());
-    } else {
-        let mut status: i32 = 0;
-        wait(&mut status);
-    }
-
     // let pid = fork();
     // if pid == 0 {
     //     exec("lmbench_all\0", vec!("lmbench_all\0", "bw_mmap_rd\0", "-P\0", "1\0", "512k\0", "open2close\0", "/var/tmp/XXX\0"), Vec::new());
@@ -180,15 +153,81 @@ fn libc_test() -> isize {
             wait(&mut 0);
         }
     }
-
-    
     0
 }
 
 fn libc_test_name() -> Vec<&'static str> {
     let all = 
 "setjmp";
-
     let names: Vec<&str> = all.splitn(150, '\n').collect();
     names
+}
+
+fn lmbench_proxy() {
+    let cmds = get_cmd_strings();
+    for str in cmds {
+        let pid = fork();
+        if pid == 0 {
+            let cmd = parse_str_to_cmds(str.to_string());
+            let cmd: Vec<&str> = cmd.iter().map(|s| s.as_str()).collect();
+            println!("[debug] cmd = {:?}", cmd);
+            exec(cmd[0], cmd, Vec::new());
+            //let mut str = str.to_string();
+            //str.push(0 as char);
+            //exec("./busybox\0", vec!("sh\0", "-c\0", str.as_str()), Vec::new());
+            panic!();
+        } else {
+            wait(&mut 0);
+        }
+    }
+}
+
+fn parse_str_to_cmds(cmd: String) -> Vec<String> {
+    let cmd: Vec<&str> = cmd.as_str().splitn(20, ' ').collect();
+    let mut words = Vec::new();
+    for word in cmd {
+        let mut a = word.to_string();
+        a.push(0 as char);
+        words.push(a);
+    }
+    words
+}
+
+pub fn get_cmd_strings() -> Vec<&'static str> {
+    let mut all =
+"busybox echo context switch overhead
+lmbench_all lat_ctx -P 1 -s 32 2 4 8 16 24 32 64 96
+lmbench_all lat_syscall -P 1 null
+lmbench_all lat_syscall -P 1 read
+lmbench_all lat_syscall -P 1 write
+busybox mkdir -p /var/tmp
+busybox touch /var/tmp/lmbench
+lmbench_all lat_syscall -P 1 stat /var/tmp/lmbench
+lmbench_all lat_syscall -P 1 fstat /var/tmp/lmbench
+lmbench_all lat_syscall -P 1 open /var/tmp/lmbench
+lmbench_all lat_select -n 100 -P 1 file
+lmbench_all lat_sig -P 1 install
+lmbench_all lat_sig -P 1 catch
+lmbench_all lat_sig -P 1 prot lat_sig
+lmbench_all lat_pipe -P 1
+lmbench_all lat_proc -P 1 fork
+lmbench_all lat_proc -P 1 exec
+busybox cp hello /tmp
+lmbench_all lat_proc -P 1 shell
+lmbench_all lat_pagefault -P 1 /var/tmp/XXX
+lmbench_all lat_mmap -P 1 512k /var/tmp/XXX
+busybox echo Bandwidth measurements
+lmbench_all bw_file_rd -P 1 512k io_only /var/tmp/XXX
+lmbench_all bw_file_rd -P 1 512k open2close /var/tmp/XXX
+lmbench_all bw_mmap_rd -P 1 512k mmap_only /var/tmp/XXX
+lmbench_all bw_mmap_rd -P 1 512k open2close /var/tmp/XXX
+lmbench_all bw_pipe -P 1
+busybox echo file system latency
+lmbench_all lat_fs /var/tmp
+";
+    let mut strings = Vec::new();
+    for string in all.lines() {
+        strings.push(string);
+    }
+    strings
 }

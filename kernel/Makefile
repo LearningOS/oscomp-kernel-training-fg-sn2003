@@ -65,7 +65,16 @@ ifeq ($(BOARD),k210)
 	python3 $(K210-BURNER) -p $(K210-SERIALPORT) -b 1500000 $(OS_BIN)
 	python3 -m serial.tools.miniterm --eol LF --dtr 0 --rts 0 --filter direct $(K210-SERIALPORT) 115200
 else ifeq ($(BOARD),qemu)
-	@$(QEMU) $(QEMU-ARGS)
+#	@$(QEMU) $(QEMU-ARGS)
+	qemu-system-riscv64 \
+    -machine virt \
+    -bios default \
+    -device loader,file=../kernel-qemu,addr=0x80200000 \
+    -drive file=../fat32.img,if=none,format=raw,id=x0 \
+    -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0 \
+    -kernel ../kernel-qemu \
+    -nographic \
+    -smp 4 -m 2G
 endif
 
 build: env user_bin $(KERNEL_BIN)
@@ -96,9 +105,9 @@ clean:
 kernel_elf: 
 	@cp ./linker/linker-$(BOARD).ld ./linker/linker.ld
 ifeq ($(MODE),debug)
-	@cargo build --offline --features "$(FEATURES)"
+	@cargo build --features "$(FEATURES)"
 else
-	@cargo build --offline --release --features "$(FEATURES)"
+	@cargo build --release --features "$(FEATURES)"
 endif
 
 $(KERNEL_BIN): kernel_elf

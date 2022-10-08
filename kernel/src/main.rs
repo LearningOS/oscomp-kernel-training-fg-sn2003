@@ -75,7 +75,7 @@ fn start_other_harts(hartid: usize) {
 #[no_mangle]
 pub fn rust_main(hartid: usize, device_tree: usize) {
     intr_off();
-    if true {
+    if hartid == 0 {
         trap::set_kernel_trap_entry();
         memory::clear_bss();
         memory::init_heap_allocator();
@@ -88,7 +88,7 @@ pub fn rust_main(hartid: usize, device_tree: usize) {
         proc::add_initproc();
         //start_other_harts(hartid);    /* 目前多核不完善 */
         //sbi::sbi_send_ipi(0b11);
-        COULD_START_INIT.store(true, Ordering::SeqCst);
+        //COULD_START_INIT.store(true, Ordering::SeqCst);
         trap::enable_timer_interrupt();
         timer::set_next_trigger();
         proc::scheduler();

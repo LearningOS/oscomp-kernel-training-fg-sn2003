@@ -1,2 +1,2 @@
 all:
-	@cd ./kernel && make build BOARD=k210
+	@cd ./kernel && make build BOARD=qemu

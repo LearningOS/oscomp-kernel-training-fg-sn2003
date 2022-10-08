@@ -46,7 +46,8 @@ pub fn sys_sigprocmask(how: usize, set: *mut usize, oldset: *mut usize) -> Resul
 
     let mut user_set: usize = 0;
 
-    if ptr::null() != oldset {
+    if ptr::null_mut() != oldset {
+        error!("copyout sigmask = {:x}", sig_mask);
         copyout(token,oldset,&sig_mask)?;
     }
 
@@ -56,7 +57,7 @@ pub fn sys_sigprocmask(how: usize, set: *mut usize, oldset: *mut usize) -> Resul
 
     copyin(token,&mut user_set,set)?;
 
-    user_set = user_set & !(1 << SIGKILL) & !(1 << SIGSTOP); //kill和stop信号不能被屏蔽
+    user_set = user_set & !(1 << (SIGKILL - 1)) & !(1 << (SIGSTOP - 1)); //kill和stop信号不能被屏蔽
     let ret = match how {
         SIG_BLOCK =>{
             *sig_mask = *sig_mask | user_set;
@@ -74,6 +75,7 @@ pub fn sys_sigprocmask(how: usize, set: *mut usize, oldset: *mut usize) -> Resul
             Err(Error::EINVAL)
         }
     };
+    error!("sig_mask = {:x}", *sig_mask);
     ret
 }
 

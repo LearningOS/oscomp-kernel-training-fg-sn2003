@@ -103,6 +103,8 @@ fn run_busybox_testcode() {
 fn run_lmbench_testcode() {
     let pid = fork();
     if pid == 0 {
+        //Signal handler overhead: 0.0505 microseconds
+        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_ctx\0", "-P\0", "1\0", "-s\0", "32\0", "2\0", "4\0","8\0","16\0","24\0","32\0","64\0","96\0"), Vec::new());
         //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_sig\0", "-P\0", "1\0", "prot\0", "lat_sig\0"), Vec::new());
         exec("lmbench_testcode.sh\0", vec!("lmbench_testcode.sh\0"), Vec::new());
     } else {
@@ -133,7 +135,7 @@ fn libc_test() -> isize {
 
 fn libc_test_name() -> Vec<&'static str> {
     let all = 
-"tls_get_new_dtv";
+"setjmp";
 
     let names: Vec<&str> = all.splitn(150, '\n').collect();
     names

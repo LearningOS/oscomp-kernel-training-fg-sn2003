@@ -173,6 +173,7 @@ impl File for Fat32File {
         trace!("fat32file.write_stat: stat = {:?}", stat);        
         let mut dirent = self.dirent.write();
         /* 通过write_stat，只能修改FAT32文件的时间 */
+        
         dirent.atime = Timespec {tv_sec: stat.st_atime_sec as isize, tv_nsec: stat.st_atime_nsec as isize};
         dirent.mtime = Timespec {tv_sec: stat.st_mtime_sec as isize, tv_nsec: stat.st_mtime_nsec as isize};
         dirent.ctime = Timespec {tv_sec: stat.st_ctime_sec as isize, tv_nsec: stat.st_ctime_nsec as isize};
@@ -209,10 +210,10 @@ impl File for Fat32File {
             st_mtime_nsec: dirent.mtime.tv_nsec as _,   
             st_ctime_sec : dirent.ctime.tv_sec as _,  
             st_ctime_nsec: dirent.ctime.tv_nsec as _,
-            // st_rdev: 0,
-            // __pad1:0,
-            // __pad2:0,
-            // __pad3:0  
+            st_rdev: 0,
+            __pad1:0,
+            __pad2:0,
+            __pad3:0  
         };
         Ok(fstat)
     }

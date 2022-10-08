@@ -217,44 +217,45 @@ bitflags! {
 #[repr(C)]
 #[derive(Debug, Default)]
 pub struct FileStat {
-	// pub st_dev      :u64,   
-    // pub st_ino      :u64,   
-    // pub st_mode     :u32,   
-    // pub st_nlink    :u32,   
-    // pub st_uid      :u32,
-    // pub st_gid      :u32,
-    // pub st_rdev     :u64,
-    // pub __pad1      :u32,
-    // pub st_size     :u32,
-    // pub st_blksize   :u32,
-    // pub __pad2       :u32,
-    // pub st_blocks    :u64,
-    // pub st_atime_sec :u32, 
-    // pub st_atime_nsec:u32,  
-    // pub st_mtime_sec :u32,  
-    // pub st_mtime_nsec:u32,   
-    // pub st_ctime_sec :u32,  
-    // pub st_ctime_nsec:u32,  
-    // pub __pad3  :u16,
-    
-    pub st_dev  :u64,   /* ID of device containing file */
-    //__pad1  :u32,
-    pub st_ino  :u64,   /* Inode number */
-    pub st_mode :u32,   /* File type and mode */
-    pub st_nlink:u32,   /* Number of hard links */
+	pub st_dev      :u64,   
+    pub st_ino  :u64,   
+    pub st_mode :u32,   
+    pub st_nlink:u32,   
     pub st_uid  :u32,
     pub st_gid  :u32,
-    //st_rdev :u64,   /* Device ID (if special file) */
-    //__pad2  :u32,
-    pub st_blksize   :u64,    /* Block size for filesystem I/O */
-    pub st_blocks    :u64,    /* Number of 512B blocks allocated */
-    pub st_size  :u64,         /* Total size, in bytes */ //????????????
-    pub st_atime_sec :i64,    
+    pub st_rdev :u64,
+    pub __pad1  :u64,
+    pub st_size :u64,
+    pub st_blksize   :u32,
+    pub __pad2       :u32,
+    pub st_blocks    :u64,
+    pub st_atime_sec :i64, 
     pub st_atime_nsec:i64,  
     pub st_mtime_sec :i64,  
     pub st_mtime_nsec:i64,   
     pub st_ctime_sec :i64,  
     pub st_ctime_nsec:i64,  
+    pub __pad3  :u64
+
+    
+    // pub st_dev  :u64,   /* ID of device containing file */
+    // //__pad1  :u32,
+    // pub st_ino  :u64,   /* Inode number */
+    // pub st_mode :u32,   /* File type and mode */
+    // pub st_nlink:u32,   /* Number of hard links */
+    // pub st_uid  :u32,
+    // pub st_gid  :u32,
+    // //st_rdev :u64,   /* Device ID (if special file) */
+    // //__pad2  :u32,
+    // pub st_blksize   :u64,    /* Block size for filesystem I/O */
+    // pub st_blocks    :u64,    /* Number of 512B blocks allocated */
+    // pub st_size  :u64,         /* Total size, in bytes */ //????????????
+    // pub st_atime_sec :i64,    
+    // pub st_atime_nsec:i64,  
+    // pub st_mtime_sec :i64,  
+    // pub st_mtime_nsec:i64,   
+    // pub st_ctime_sec :i64,  
+    // pub st_ctime_nsec:i64,  
 }
 
 // refer to man/inode

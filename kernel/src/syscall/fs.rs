@@ -116,7 +116,9 @@ pub fn sys_dup3(old_fd: u32, new_fd: u32) -> Result<isize, Error> {
 
 //只实现了测试程序需要用到的flag
 pub fn sys_fcntl(fd: u32, request: u32, arg: usize) -> Result<isize, Error> {
+    const F_GETFD: u32 = 1;
     const F_SETFD: u32 = 2;
+    const F_GETFL: u32 = 3;
     const F_DUPFD_CLOEXEC: u32 = 1030;
     trace!("sys_fcntl: fd = {}. request = {}, arg_ptr = {}", fd, request, arg);
 
@@ -143,6 +145,13 @@ pub fn sys_fcntl(fd: u32, request: u32, arg: usize) -> Result<isize, Error> {
             }
             return Err(Error::EMFILE)
         }
+        F_GETFD => {
+            return Ok(0xffff);
+        }
+        F_GETFL => {
+            return Ok(0xffff);
+        }
+
         _ => {
             info!("sys_fcntl: unsupported request: {}!, return 0", request);
             return Ok(0)
@@ -846,7 +855,7 @@ pub fn sys_fstat(fd: u32, kst: *mut FileStat) -> Result<isize, Error> {
 
     /* 获取fstat */
     let fstat = file.read_stat()?;
-
+    error!("fstat = {:?}", fstat);
     /* 将fstat复制到用户地址空间 */
     copyout(token, kst, &fstat)?;
     Ok(0)

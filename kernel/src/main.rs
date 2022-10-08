@@ -40,6 +40,7 @@ mod board;
 use core::arch::{global_asm, asm};
 use core::sync::atomic::{AtomicBool, Ordering};
 use config::MAX_CPU_NUM;
+use riscv::asm::wfi;
 use riscv::register::{sstatus};
 use sbi::{sbi_putchar, sbi_hart_start};
 use trap::intr_off;
@@ -93,6 +94,9 @@ pub fn rust_main(hartid: usize, device_tree: usize) {
         timer::set_next_trigger();
         proc::scheduler();
     } else {
+        unsafe {
+            wfi();
+        }
         while !COULD_START_INIT.load(Ordering::SeqCst) {}
         other_main(hartid);
     }

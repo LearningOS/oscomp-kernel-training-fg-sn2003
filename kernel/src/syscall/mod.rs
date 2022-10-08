@@ -223,7 +223,7 @@ pub const SYSCALL_SHUTDOWN          :usize = 999;
 
 pub fn strace(id: usize,args: [usize; 6] ,r:isize) -> bool {
     let tid = get_current_task().unwrap().tid;
-    if id != SYSCALL_WAIT && id != SYSCALL_SCHED_YIELD  && tid != 0 && tid != 1 && tid != 2 {
+    if id != SYSCALL_WAIT && id != SYSCALL_SCHED_YIELD  && tid != 0  {
         let name = SYSCALL_NAMES.get(&id).unwrap_or(&"UNKONWN");
         warn!("{}: tid = {} , args[0]: 0x{:x} , args[1]: 0x{:x} , args[2]: 0x{:x} , args[3]: 0x{:x} , args[4]: 0x{:x} ,", name, tid ,args[0],args[1],args[2],args[3],args[4]);
         trace!("return: 0x{:x}",r as usize);
@@ -235,7 +235,8 @@ pub fn strace(id: usize,args: [usize; 6] ,r:isize) -> bool {
 
 pub fn strace2(id: usize) -> bool {
     let tid = get_current_task().unwrap().tid;
-    if id != SYSCALL_WAIT && id != SYSCALL_SCHED_YIELD  && tid != 0 && tid != 1 && tid != 2 {
+    if id != SYSCALL_WAIT && id != SYSCALL_SCHED_YIELD  
+    && id != SYSCALL_GETRUSAGE && id != SYSCALL_CLOCKGETTIME && tid != 0  {
         let name = SYSCALL_NAMES.get(&id).unwrap_or(&"UNKONWN");
         warn!("{}: tid = {}", name, tid );
         true

@@ -375,7 +375,7 @@ pub fn sys_wait4(pid: i32, exit_code_ptr: *mut i32, _options: i32) -> Result<isi
         
         if let Some(child_task) = zombie {
             if Arc::strong_count(&child_task) != 1 {
-
+                error!("count != 1");
             }
             task.time_info.lock().update_time_child_exit(&child_task.time_info.lock());
             let found_pid = child_task.get_pid();

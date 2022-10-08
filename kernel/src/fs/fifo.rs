@@ -1,7 +1,7 @@
 // from rCore_tutorial v3   fixme: license
 
 
-use super::File;
+use super::{File, SeekMode};
 use super::file::PollType;
 use spin::Mutex;
 use alloc::vec::Vec;
@@ -212,5 +212,9 @@ impl File for Pipe {
             PollType::ERR => false
         };
         Ok(ret)
+    }
+
+    fn seek(&self, _pos : usize, _mode: SeekMode) -> Result<isize, Error> {
+        Ok(0)
     }
 }

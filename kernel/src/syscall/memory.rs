@@ -20,9 +20,10 @@ pub fn sys_brk(address: usize) -> Result<isize, Error> {
     trace!("sys_brk, address = {:x}", address);
     let task =  get_current_task().unwrap();
     let mut memory_set = &mut *task.get_memory();
+    //println!("\ncurrent_end:0x{:x}\n",memory_set.current_end.0);
     let addr = VirtAddr::from(address);
 
-    if address == 0 {
+    if address == 0 || addr == memory_set.current_end{
         return Ok(memory_set.current_end.0 as isize);
     }
 
@@ -31,30 +32,30 @@ pub fn sys_brk(address: usize) -> Result<isize, Error> {
     }
 
     let ceil = addr.ceil_page_num();
-    let heap_area = memory_set.areas
-        .iter_mut()
-        .find(|area| VirtAddr::from(area.vpn_range.get_start())
-             == memory_set.program_end);
+    //let heap_area = memory_set.areas
+    //    .iter_mut()
+    //    .find(|area| VirtAddr::from(area.vpn_range.get_start())
+    //         == memory_set.program_end);
              
     /* 如果没有heap_area, 就创建一个 */
-    if heap_area.is_none() {
+    if addr > memory_set.current_end{
         let map_area = MapArea::new(
-            memory_set.program_end,
+            memory_set.current_end,
             ceil.into(),
             MapType::Framed,
             MapProt::READ | MapProt::WRITE | MapProt::USER,
         );
         memory_set.push_delay(map_area);
         memory_set.current_end = ceil.into();
-    } else {
-        let heap_area = heap_area.unwrap();
-        if addr < memory_set.current_end {
-            let mut delete = heap_area.split_right_pop(ceil, heap_area.map_prot);
-            delete.unmap(&mut memory_set.pagetable);
-        }
-        heap_area.vpn_range.set_end(ceil);
-        memory_set.current_end = ceil.into();
     }
+    if addr < memory_set.current_end {
+        //let mut delete = heap_area.split_right_pop(ceil, heap_area.map_prot);
+        memory_set.remove_area(addr, memory_set.current_end, false);
+    }
+        //println!("heap_area = {:x?}, prot = {:?}", heap_area.vpn_range, heap_area.map_prot);    
+
+    memory_set.current_end = ceil.into();
+
 
     Ok(memory_set.current_end.0 as isize)
 }
@@ -62,8 +63,13 @@ pub fn sys_brk(address: usize) -> Result<isize, Error> {
 pub fn sys_munmap(mut start: usize, mut len: usize) -> Result<isize, Error> {
     trace!("sys_munmap: start: {:x}, len = {:x}", start, len);
 
-    if start % PAGE_SIZE != 0 || len % PAGE_SIZE != 0 {
+    if start % PAGE_SIZE != 0  {
+        println!("start = {:x} len = {:x}",start,len);
+        panic!();
         return Err(Error::EINVAL);
+    }
+    if len % PAGE_SIZE !=0 {
+        len = (len/PAGE_SIZE + 1) * PAGE_SIZE;
     }
     let task = get_current_task().unwrap();
     let memory_set = &mut *task.get_memory();
@@ -72,10 +78,20 @@ pub fn sys_munmap(mut start: usize, mut len: usize) -> Result<isize, Error> {
     Ok(0)
 }
 
+bitflags! {
+    pub struct MmapFlag: u32 {
+        const SHARED    = 0x01;
+        const PRIVATE   = 0x02;
+        const FIXED     = 0x10;
+        const ANON      = 0x20;
+    }
+}
+
+
 
 pub fn sys_mmap(
     start: usize, 
-    len: usize, 
+    mut len: usize, 
     prot: u32, 
     flags: u32, 
     fd: i32, 
@@ -87,8 +103,12 @@ pub fn sys_mmap(
     trace!("[sys_mmap]: start: {:x}, len: {:x}, prot:{:b}, flag: {:?}, fd: {}, off: {}" ,
         start, len, map_prot, flag, fd, off);
 
-    if (start % PAGE_SIZE) != 0 || (len % PAGE_SIZE) != 0 {
+    if (start % PAGE_SIZE) != 0 {
         return Err(Error::EINVAL);
+    }
+    //mmap允许数据长度不页对齐，cc1会传入不对齐的长度
+    if (len % PAGE_SIZE) != 0 {
+        len = (len/PAGE_SIZE + 1) * PAGE_SIZE;
     }
 
     let task = get_current_task().unwrap();
@@ -98,6 +118,7 @@ pub fn sys_mmap(
     let file;
 
     if flag.contains(MmapFlag::FIXED) {
+        //println!("\nfixed addr:0x{:x}\n",start);
         memory_set.remove_area(start.into(), (start + len).into(), false);
     } else {
         addr = memory_set.find_free_space(len).ok_or(Error::ENOMEM)?;
@@ -135,8 +156,17 @@ pub fn sys_mmap(
 
 
 bitflags! {
-    pub struct MmapFlag: u32 {
-        const SHARED    = 0x01;
+    pub struct ProtFlag: u32 {
+        const NONE  = 0x0;
+        const READ  = 0x1;
+        const WRITE = 0x2;
+        const EXEC  = 0x4;
+    }
+}
+
+bitflags! {
+    pub struct MapFlag: u32 {
+        const SHARE     = 0x01;
         const PRIVATE   = 0x02;
         const FIXED     = 0x10;
         const ANON      = 0x20;
@@ -147,7 +177,7 @@ pub fn sys_msync() -> Result<isize, Error> {
     Ok(0)
 }
 
-pub fn sys_mprotect(mut addr: usize, mut len: usize, prot: u32) -> Result<isize, Error>  {   
+pub fn sys_mprotect(mut addr: usize, mut len: usize, prot: u32) -> Result<isize, Error>  {
     let start = VirtAddr::from(addr);
     let end = VirtAddr::from(addr + len);
 
@@ -163,4 +193,18 @@ pub fn sys_mprotect(mut addr: usize, mut len: usize, prot: u32) -> Result<isize,
 
 pub fn sys_madvise(addr:usize,len: usize,advice:i32) -> Result<isize,Error>{
     Ok(0)
+}
+
+
+bitflags! {
+    pub struct MremapFlag: u32 {
+        const MAYMOVE   = 0x01;
+        const FIXED     = 0x02;
+        const DONTUNMAP = 0x04;
+    }
+}
+
+//必须确保remap的段权限一致
+pub fn sys_mremap(old_address:usize,old_size:usize,new_size:usize,flags:u32,new_address:usize) -> Result<isize,Error> {
+    return Ok(-1);
 }

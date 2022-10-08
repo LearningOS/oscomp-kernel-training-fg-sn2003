@@ -149,7 +149,6 @@ impl TaskManager {
     
     pub fn fetch_task(&mut self) -> Option<Arc<TaskControlBlock>> {
         if let Some(task) = self.ready_tasks.pop() {
-            self.running_tasks[get_hartid()] = Some(task.clone());
             Some(task)
         } else {
             None
@@ -219,15 +218,15 @@ impl TaskManager {
 
     pub fn debug_print(&self) {
         for task in self.ready_tasks.list.iter() {
-            error!("task: {}   --Ready", task.tid);
+            println!("task: {}   --Ready", task.tid);
         }
         for task in self.running_tasks.iter() {
             if task.is_some() {
-                error!("task: {}   --Runing", task.as_ref().unwrap().tid);
+                println!("task: {}   --Runing", task.as_ref().unwrap().tid);
             }
         }
         for (_, task) in self.stopped_tasks.list.iter() {
-            error!("task: {}   --Sleeping", task.tid);
+            println!("task: {}   --Sleeping", task.tid);
         }
     }
 }

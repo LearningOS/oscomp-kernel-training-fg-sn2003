@@ -92,21 +92,20 @@ pub fn pagefault_handler(scause: Scause, vaddr: VirtAddr) {
     
     match result {
         Ok(_) => {
-            flush_tlb();
-            trace!("[kernel] handle a pagefault, vaddr = {:x} tid = {} is_store={:?}", vaddr.0, tid, is_store);
+            //flush_tlb();
+            //trace!("[kernel] handle a pagefault, vaddr = {:x} tid = {} is_store={:?}", vaddr.0, tid, is_store);
         }
         Err(string) => {
             let task = get_current_task().unwrap();
             task.get_memory().trace_areas();
             let trap_cx = task.get_trap_cx();
-            println!("trap_cx = {:x?}", trap_cx);
+            trace!("trap_cx = {:x?}", trap_cx);
             println!(
-                "[kernel] {:?} in application, bad addr = {:#x}, bad instruction = {:#x}, {}, tid = {}.",
+                "[kernel] {:?} in application, bad addr = {:#x}, bad instruction = {:#x}, {}",
                 scause.cause(),
                 vaddr.0,
                 task.get_trap_cx().sepc,
                 string,
-                get_tid()
             );
             panic!();
             drop(task);
@@ -117,10 +116,15 @@ pub fn pagefault_handler(scause: Scause, vaddr: VirtAddr) {
 
 #[no_mangle]
 pub fn trap_handler(){
+
+
+
     set_kernel_trap_entry();
 
     let scause = scause::read();
+
     let stval = stval::read();
+    //println!("enter trap handler, scause = {:?}", scause.cause());
     //task.time_info.lock().update_time_enter_kernel();
     //wake_clock_futex_task();
     unsafe{
@@ -129,6 +133,7 @@ pub fn trap_handler(){
             in(reg) 0x8000000000006000 as usize,
         );
     }
+    let task = get_current_task().unwrap();
     match scause.cause() {
         Trap::Exception(Exception::UserEnvCall) => {
             let mut cx = get_current_trap_context();
@@ -153,11 +158,13 @@ pub fn trap_handler(){
         }
 
         _ => {
+            let mut cx = get_current_trap_context();
             panic!(
-                "Unsupported trap {:?}, stval = {:#x},sepc={:#x}!",
+                "Unsupported trap {:?}, stval = {:#x},sepc={:#x}! cx = {:x?}",
                 scause.cause(),
                 stval,
                 get_current_trap_context().sepc,
+                cx,
             );
         }
     }
@@ -176,10 +183,12 @@ pub fn trap_return() {
     let userret_va = userret as usize - uservec as usize + TRAMPOLINE;
     let trap_cx_ptr = trapframe_bottom(task.private_tid).0;
     let user_satp = task.get_user_token();
+
+
     set_user_trap_entry();
     drop(task);
 
-
+    
     unsafe{
         asm!(
             "csrw sstatus, {}",
@@ -187,7 +196,7 @@ pub fn trap_return() {
         );
     }
 
-    //error!("return, sstatus = {:x?}", sstatus::read());
+    //println!("return, sstatus = {:x?}", sstatus::read());
     unsafe {
         asm!(
             "fence.i",

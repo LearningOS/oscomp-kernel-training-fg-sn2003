@@ -48,6 +48,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "device_tree"
+version = "1.0.3"
+source = "git+https://github.com/rcore-os/device_tree-rs#2f2e55fb5238466747fef49d9ce0f59b2e808154"
+
+[[package]]
 name = "embedded-hal"
 version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -105,6 +110,7 @@ version = "0.1.0"
 dependencies = [
  "bitflags",
  "buddy_system_allocator",
+ "device_tree",
  "embedded-hal 0.2.7",
  "k210-hal",
  "k210-pac",
@@ -314,7 +320,7 @@ checksum = "77439c1b53d2303b20d9459b1ade71a83c716e3f9c34f3228c00e6f185d6c002"
 [[package]]
 name = "virtio-drivers"
 version = "0.1.0"
-source = "git+https://github.com/rcore-os/virtio-drivers?rev=3b24d36#3b24d363d64927416123ed5e6ea95e535ce4f9eb"
+source = "git+https://github.com/rcore-os/virtio-drivers?rev=4993381#499338115b7d462f051277fd49437d090789ba7c"
 dependencies = [
  "bitflags",
  "log",

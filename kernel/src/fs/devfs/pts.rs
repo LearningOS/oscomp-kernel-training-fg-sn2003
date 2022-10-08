@@ -1,5 +1,7 @@
+use alloc::collections::VecDeque;
 use alloc::{vec::Vec, sync::Arc};
-use crate::fs::{FileIndex, Fileid};
+use spin::Mutex;
+use crate::fs::{FileIndex, Fileid, PollType};
 use crate::fs::vfs::FSid;
 use crate::utils::mem_buffer::MemBuffer;
 use crate::{memory::copyout};
@@ -8,6 +10,7 @@ use crate::utils::Error;
 use crate::proc::suspend_current;
 use crate::driver::serial::STDIO;
 use super::{FileOpenMode, File, FileStat, CharFile, DeviceFile, StMode};
+use lazy_static::*;
 
 pub const TIOCGWINSZ    :usize = 0x5413;
 //pub const TCGETS        :usize = 0x5401;
@@ -15,6 +18,7 @@ pub const TIOCGWINSZ    :usize = 0x5413;
 pub struct PTS {
     pub mode: FileOpenMode
 }
+
 
 #[repr(C)]
 #[derive(Default, Debug, Clone, Copy)]
@@ -35,6 +39,12 @@ impl PTS {
     }
 }
 
+lazy_static! {
+    pub static ref STDIO_BUF: Mutex<VecDeque<u8>> = {
+        Mutex::new(VecDeque::new())
+    };
+}
+
 
 impl File for PTS {
     fn read(&self, len: usize) -> Result<Vec<u8>, Error> {
@@ -45,8 +55,12 @@ impl File for PTS {
         for _ in 0..len {
             let mut c: u8;
             loop {
+                if let Some(ch) = STDIO_BUF.lock().pop_front() {
+                    c = ch;
+                    break;
+                }
                 c = STDIO.lock().getchar();
-                if c == 0 {
+                if c == 0 || c == 255 {
                     suspend_current();
                     continue;
                 } else {
@@ -54,7 +68,6 @@ impl File for PTS {
                 }
             }
             let ch = c as u8;
-            //STDIO.lock().putchar(ch);
             if ch == b'\n' || ch == b'\r' {
                 buf.push(b'\n');
                 break
@@ -105,6 +118,26 @@ impl File for PTS {
     }
     fn as_dir<'a>(self: Arc<Self>) -> Result<Arc<dyn crate::fs::DirFile + 'a>, Error> where Self: 'a {
         Err(Error::ENOTDIR)
+    }
+    fn poll(&self, ptype: PollType) -> Result<bool, Error> {
+        let ret = match ptype {
+            PollType::READ => {
+                let mut buf = STDIO_BUF.lock();
+                if !buf.is_empty() {
+                    true;
+                }
+                let c = STDIO.lock().getchar(); 
+                if c == 0 || c == 255 {
+                    false
+                } else {
+                    buf.push_back(c);
+                    true
+                }
+            },
+            PollType::WRITE => true,
+            PollType::ERR => false
+        };
+        Ok(ret)
     }
 }
 

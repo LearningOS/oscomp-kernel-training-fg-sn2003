@@ -8,6 +8,7 @@ use alloc::string::String;
 use log::*;
 use super::*;
 use crate::config::*;
+use crate::console::print;
 use crate::proc::{get_current_task, exit_current, SwapList, get_tid};
 use crate::utils::Error;
 
@@ -213,7 +214,7 @@ impl PageTable {
         return Ok(());
     }
 
-    pub fn copy_from_existed2 (
+    pub fn copy_from_existed2(
         &mut self,
         existed: &mut PageTable
     ) -> Result<(), Error> {
@@ -240,6 +241,7 @@ impl PageTable {
             return Some(ppn);
         } 
         else if let Some(swap_vpn) = self.pick_page_to_swap() {
+            panic!();
             log::set_max_level(log::LevelFilter::Trace);
             let task = get_current_task().unwrap();
             let swap = &mut *task.swap.lock();
@@ -358,7 +360,11 @@ impl PageTable {
             if flag.contains(PTEFlags::S) {
                 new_flag.insert(PTEFlags::S);
             }
-            new_flag.insert(PTEFlags::V);
+            
+            if flag.contains(PTEFlags::V) {
+                new_flag.insert(PTEFlags::V);
+            }
+
             assert!(!(new_flag.contains(PTEFlags::C) && !new_flag.contains(PTEFlags::W)));
             pte.set_flag(new_flag);
         }
@@ -447,7 +453,6 @@ pub fn translate_byte_buffer(
 pub fn translate_str(token: usize, ptr: *const u8) -> Result<String, Error> {
     let mut string = Vec::new();
 
-    // let mut buffer = translate_byte_buffer(token, ptr, MAX_STR_LEN, false);
     #[allow(unused_assignments)]
     let mut is_find = false;
     let mut sum_len = 0;
@@ -506,7 +511,6 @@ pub fn copyin<T>(token: usize, dst: &mut T, src: * const T) -> Result<(), Error>
 }
 
 pub fn copyout<T>(token: usize, dst: *mut T, src: &T) -> Result<(), Error>{
-    //println!("[copyout_size] {}",core::mem::size_of::<T>());
     let mut dst_buffer = translate_byte_buffer(
         token, 
         dst as *const u8, 

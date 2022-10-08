@@ -20,7 +20,7 @@ pub fn sys_getrusage(who: i32, usage: *mut Rusage) -> Result<isize, Error> {
     let mut rusage: Rusage = Default::default();
     rusage.ru_utime = Timeval::from_tick(time_info.utime as usize);
     rusage.ru_stime = Timeval::from_tick(time_info.stime as usize);
-    //trace!("ru_utime = {:?}, ru_stime = {:?}", rusage.ru_utime, rusage.ru_stime);
+
     copyout(token, usage, &rusage)?;
     Ok(0)
 }
@@ -80,6 +80,10 @@ pub fn sys_sysinfo(info_ptr: *mut SysInfo) -> Result<isize, Error> {
     let token = get_current_user_token();
     copyout(token, info_ptr, &info)?;
     Ok(0)
+}
+
+pub fn sys_getrandom(buf:usize,buf_len:usize,flag:u32) -> Result<isize, Error> {
+    Ok(buf_len as isize)
 }
 
 

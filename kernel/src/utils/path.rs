@@ -14,8 +14,12 @@ pub struct Path {
 impl Debug for Path {
     fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
         write!(f, "/")?;
+        let len = self.components.len();
         for p in &self.components {
             write!(f, "{}", p)?;
+            if self.components[len - 1] != *p {
+                write!(f, "/")?;
+            }
         }
         Ok(())
     }

@@ -34,11 +34,10 @@ pub fn suspend_current() {
     let current_task = get_current_task().unwrap();
     let mut task_info = current_task.get_task_info();
     let task_context_ptr = &mut task_info.context as *mut TaskContext;
-    current_task.time_info.lock().update_time_scheduled();
+
     current_task.set_status(TaskStatus::READY);
     drop(task_info);
     drop(current_task);
-    free_current_in_running_list();
     sched(task_context_ptr);
 }
 
@@ -52,8 +51,6 @@ pub fn sleep_current<T>(chan: Channel, lock: MutexGuard<T>) {
     drop(task_info);
     sleep_task(current_task, chan);
     drop(lock);
-    trace!("sleep_current");
-    free_current_in_running_list();
     sched(task_context_ptr);
 }
 
@@ -79,7 +76,6 @@ pub fn exit_current(exit_code: i32) {
     drop(thread_group);
     
     take_current_task().unwrap();
-    free_current_in_running_list();
     current_task.set_status(TaskStatus::ZOMBIE);
     drop(current_task);
 
@@ -108,10 +104,18 @@ pub fn exit_current_group(exit_code: i32) {
         current_task.free_resource();
     }
     thread_group.list.clear();
+    let mut fdtable = current_task.get_fd_table();
+    fdtable.table.clear();
+    drop(fdtable);
     drop(thread_group);
 
     take_current_task().unwrap();
-    free_current_in_running_list();
+    
+    let parent = current_task.parent.lock().as_ref().unwrap().upgrade().unwrap();
+    let chan = parent.get_channel();
+    wake_task(*chan);
+    drop(chan);
+
     current_task.set_status(TaskStatus::ZOMBIE);
     drop(current_task);
     

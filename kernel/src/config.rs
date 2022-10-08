@@ -1,21 +1,18 @@
 pub const TICKS_PER_SEC: usize = 10;
 
 /* MEMORY */
-pub const USER_STACK_SIZE: usize = 0x1000 * 128;
-pub const KERNEL_STACK_SIZE: usize = 0x1000 * 2;
-pub const KERNEL_HEAP_SIZE: usize = 0x170_000;
+pub const USER_STACK_SIZE: usize = 4096 * 256;
+pub const KERNEL_STACK_SIZE: usize = 4096 * 32;
+pub const KERNEL_HEAP_SIZE: usize = 0x800_000;
+pub const MEMORY_END: usize = 0x90_000_000;  
 pub const PAGE_SIZE: usize = 4096;
 pub const PAGE_BITS_WIDTH: usize = 12;
-pub const MEMORY_TOP: usize = 0xa0_000_000;
-pub const TRAMPOLINE: usize = MEMORY_TOP - PAGE_SIZE;
+pub const TRAMPOLINE: usize = (usize::MAX) - PAGE_SIZE + 1;     
 pub const TRAPFRAME: usize = TRAMPOLINE - PAGE_SIZE;
-pub const SIG_DEFAULT_HANDLER: usize = TRAMPOLINE - 100 * PAGE_SIZE;
-pub const DYNAMIC_LINKER_SIZE: usize = 0;
-pub const DYNAMIC_LINKER: usize = SIG_DEFAULT_HANDLER - DYNAMIC_LINKER_SIZE;
-pub const KERNEL_STACK_BASE: usize = DYNAMIC_LINKER - PAGE_SIZE;
-pub const MEMORY_END: usize = 0x80_800_000;  
-pub const FREE_MEMORY_TOP: usize = 0x30_000_000; 
-
+pub const SIG_DEFAULT_HANDLER: usize = TRAPFRAME - 0x1000 * PAGE_SIZE;
+pub const DYNAMIC_LINKER:usize = SIG_DEFAULT_HANDLER - 0x10000 * PAGE_SIZE;
+pub const FREE_MEMORY_TOP: usize = DYNAMIC_LINKER - PAGE_SIZE; 
+pub const KERNEL_STACK_BASE: usize = 0xf0_000_000;
 
 
 /* PROCESS */
@@ -25,15 +22,15 @@ pub const MAX_CPU_NUM: usize = 16;
 
 /* FILE SYSTEM */
 pub const BLOCK_SIZE: usize = 512; 
-pub const BLOCK_CACHE_SIZE: usize = 32;
-pub const CLUSTER_CACHE_SIZE: usize = 512;
+pub const BLOCK_CACHE_SIZE: usize = 128;
+pub const CLUSTER_CACHE_SIZE: usize = 4096;
 pub const MAX_LINK_RECURSE: usize = 32;
-pub const MAX_FILE_SIZE: usize = 1*1024*1024*1024;
+pub const MAX_FILE_SIZE: usize = 3*1024*1024*1024;
 pub const PIPE_BUFFER_SIZE: usize = 512;
-pub const SYSLOG_SIZE: usize = 0x400;
+pub const SYSLOG_SIZE: usize = 0x1;
 
 //temporary
-pub const MAX_STR_LEN: usize = 128;
+pub const MAX_STR_LEN: usize = 512;
 
 //utsname
 pub const UTSNAME_LEN       : usize = 65;

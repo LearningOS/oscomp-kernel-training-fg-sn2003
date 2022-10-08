@@ -12,5 +12,4 @@ pub const MMIO: &[(usize, usize)] = &[
 ];
 
 pub type BlockDeviceImpl    = crate::driver::block_device::virtio_blk::VirtIOBlock;
-//pub type StdioImpl          = crate::driver::serial::sbi_stdio::SBIStdio;
-pub type StdioImpl          = crate::driver::serial::ns16550a::Ns16550a;
+pub type StdioImpl          = crate::driver::serial::sbi_stdio::SBIStdio;

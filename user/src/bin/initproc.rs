@@ -20,17 +20,16 @@ const LINE_START: &str = ">> ";
 #[no_mangle]
 fn main() -> i32 {
     println!("[initproc] enter initproc");
-    const ECHILD: isize = 10;
     if fork() == 0 {
-        //run_lua_testcode();
-        //run_busybox_testcode();
-        run_lmbench_testcode();
+        final_comp();
+        //sh();
         shutdown();
     } else {
         loop {
             let mut exit_code: i32 = 0;
             let pid = wait(&mut exit_code);
-            if pid == -ECHILD {
+            if pid == -10 {
+                //ECHILD
                 yield_();
                 continue;
             }
@@ -43,11 +42,41 @@ fn main() -> i32 {
     0
 }
 
+fn sh() {
+    let pid = fork();
+    if pid == 0 {
+        exec("/bin/busybox\0", vec!["rm\0", ".ash_history\0"], Vec::new());
+    } else {
+        let mut status: i32 = 0;
+        wait(&mut status);
+        exec("/bin/busybox\0", vec!("ash\0"), Vec::new());
+    }
+}
 
 fn final_comp() {
+    //libc_test();
+    run_libc_testcode();
     run_lua_testcode();
     run_busybox_testcode();
     run_lmbench_testcode();
+}
+
+fn run_libc_testcode() {
+    // let pid = fork();
+    // if pid == 0 {
+    //     exec("run-static.sh\0", vec!["run-static.sh\0"], Vec::new());
+    // } else {
+    //     let mut status: i32 = 0;
+    //     wait(&mut status);
+    // }
+
+    let pid = fork();
+    if pid == 0 {
+        exec("run-dynamic.sh\0", vec!["run-dynamic.sh\0"], Vec::new());
+    } else {
+        let mut status: i32 = 0;
+        wait(&mut status);
+    }
 }
 
 fn run_lua_testcode() {
@@ -64,6 +93,7 @@ fn run_busybox_testcode() {
     let pid = fork();
     if pid == 0 {
         exec("busybox_testcode.sh\0", vec!["busybox_testcode.sh\0"], Vec::new());
+        //exec("/busybox\0", vec!["find\0", "-name\0", "busybox_cmd.txt\0"], Vec::new());
     } else {
         let mut status: i32 = 0;
         wait(&mut status);
@@ -72,7 +102,8 @@ fn run_busybox_testcode() {
 
 fn run_lmbench_testcode() {
     let pid = fork();
-    if pid == 0 {    
+    if pid == 0 {
+        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_sig\0", "-P\0", "1\0", "prot\0", "lat_sig\0"), Vec::new());
         exec("lmbench_testcode.sh\0", vec!("lmbench_testcode.sh\0"), Vec::new());
     } else {
         let mut status: i32 = 0;
@@ -80,94 +111,30 @@ fn run_lmbench_testcode() {
     }
 }
 
-
-fn sh() {
-    let pid = fork();
-    if pid == 0 {
-        exec("/busybox\0", vec!["rm\0", ".ash_history\0"], Vec::new());
-    } else {
-        let mut status: i32 = 0;
-        wait(&mut status);
-        exec("busybox\0", vec!("sh\0"), Vec::new());
-    }
-}
-
-fn sh_proxy() -> isize {
-    let mut line: String = String::new();
-    let prefix = vec!("sh\0", "-c\0");
-    print!(">> ");
-    loop {
-        let c = getchar();
-        match c {
-            LF | CR => {
-                println!("");
-                if !line.is_empty() {
-                    let mut last_cmd = String::from("/busybox ");
-                    line.push('\0');
-                    last_cmd.push_str(line.as_str());
-                    let mut cmd = prefix.clone();
-                    cmd.push(last_cmd.as_str());
-                    let pid = fork();
-                    if pid == 0 {
-                        if exec("/busybox\0", cmd, Vec::new()) == -1 {
-                            println!("Error when executing!");
-                            return -4;
-                        }
-                        exit(0);
-                        unreachable!();
-                    } else {
-                        let mut exit_code: i32 = 0;
-                        let exit_pid = waitpid(pid as usize, &mut exit_code);
-                        assert_eq!(pid, exit_pid);
-                        //println!("Shell: Process {} exited with code {}", pid, exit_code);
-                    }
-                    line.clear();
-                }
-                print!(">> ");
-            }
-            BS | DL => {
-                if !line.is_empty() {
-                    print!("{}", BS as char);
-                    print!(" ");
-                    print!("{}", BS as char);
-                    line.pop();
-                }
-            }
-            _ => {
-                print!("{}", c as char);
-                line.push(c as char);
-            }
+fn libc_test() -> isize {
+    println!("libc_test");
+    let names = libc_test_name();
+    for name in names {
+        println!("test = {}", name);
+        let pid = fork();
+        if pid == 0 {
+            let mut test = name.to_string();
+            test.push('\0');            
+            exec("./runtest.exe\0", vec!("-w\0","entry-dynamic.exe\0", test.as_str()), Vec::new());
+            panic!();
+        } else {
+            wait(&mut 0);
         }
     }
+
+    
+    0
 }
 
+fn libc_test_name() -> Vec<&'static str> {
+    let all = 
+"tls_get_new_dtv";
 
-
-
-fn lmbench() {
-    let pid = fork();
-    if pid == 0 {
-        //lmbench_all lat_sig -P 1 prot lat_sig
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_sig\0", "-P\0", "1\0", "prot\0", "lat_sig\0"), Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_pipe\0", "-P\0", "1\0"), Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "lmdd\0", "label=\"File /XXX3 write bandwidth:\"\0", "of=/XXX3\0", "move=1m\0", "fsync=1\0", "print=3\0"), Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "bw_file_rd\0", "-P\0", "1\0", "512k\0", "io_only\0", "XXX\0"), Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_fs\0", "/var/tmp\0"), Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_mmap\0", "-P\0", "1\0", "512k\0", "/var/tmp/XXX\0"), Vec::new());
-        exec("lmbench_all\0", vec!["lmbench_all\0","lat_ctx\0","-P\0","1\0","-s\0", "32\0","2\0", "4\0", "8\0", "16\0", "24\0", "32\0", "64\0"], Vec::new());
-        //exec("lmbench_all\0", vec!["lmbench_all\0","lat_ctx\0","-P\0","1\0","-s\0", "32\0", "64\0"], Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_syscall\0", "-P\0", "1\0", "null\0"), Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_pagefault\0", "-P\0", "1\0", "xxx1\0"), Vec::new());        
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_syscall\0", "-P\0", "1\0", "fstat\0", "lua\0"), Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_syscall\0", "-P\0", "1\0", "stat\0", "lua\0"), Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "bw_mmap_rd\0", "-P\0", "1\0", "128k\0", "mmap_only\0", "XXX\0"), Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "lmdd\0", "label=\"File /X write bandwidth:\"\0", "of=/X move=645m\0", "fsync=1\0", "print=3\0"), Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "lat_pipe\0", "-P\0", "1\0"), Vec::new());
-        //exec("lmbench_all\0", vec!("lmbench_all\0", "bw_pipe\0", "-P\0", "1\0", "-M\0", "12k\0"), Vec::new());
-    } else {
-        let mut status: i32 = 0;
-        wait(&mut status);
-    }
+    let names: Vec<&str> = all.splitn(150, '\n').collect();
+    names
 }
-
-

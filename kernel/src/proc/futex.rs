@@ -11,7 +11,7 @@ impl FutexList {
     }
 
     pub fn add_task(&mut self, task: Arc<TaskControlBlock>, key: usize) {
-        trace!("futexlist.add_task : task.tid = {} waiting on {:x}", task.tid, key);
+        error!("futexlist.add_task : task.tid = {} waiting on {:x}", task.tid, key);
         if self.list.contains_key(&key) {
             let queue = self.list.get_mut(&key).unwrap();
             queue.push_back(task);
@@ -23,13 +23,13 @@ impl FutexList {
     }
 
     pub fn wake(&mut self, key: usize, num: usize) -> usize {
-        trace!("futexlist.wake: waking key = {:x}", key);
+        warn!("futexlist.wake: waking key = {:x}", key);
         if self.list.contains_key(&key) {
             let queue = self.list.get_mut(&key).unwrap();
             for i in 0..num {
                 
                 if let Some(task) = queue.pop_front() {
-                    trace!("futexlist:wake a task, tid = {}", task.tid);
+                    warn!("futexlist:wake a task, tid = {}", task.tid);
                     wake_task(*task.get_channel());
                 } else {
                     return i;

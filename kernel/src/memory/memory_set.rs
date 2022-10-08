@@ -284,7 +284,7 @@ impl MapArea {
 
     pub fn is_accessible(&self, is_store: bool) -> bool {
         if is_store == true && !self.is_writable() {
-            warn!("Try to write an unreadable page");
+            warn!("Try to write an unwriteable page");
             return false;
         }
         if is_store == false && !self.is_readable() {
@@ -502,7 +502,7 @@ impl MemorySet {
             }
 
             to_change.change_prot(&mut self.pagetable, prot)?;
-
+            self.areas.push(to_change);
             if finish {
                 break;
             }
@@ -612,6 +612,7 @@ impl MemorySet {
     }
 
     pub fn from_elf_file(elf_file: Arc<dyn File>) -> (Self, usize, usize, Vec<Aux>) {
+
         let mut auxv: Vec<Aux>=Vec::new();
         let mut memory_set = MemorySet::new();
         
@@ -636,7 +637,7 @@ impl MemorySet {
             let ph = elf.program_header(i).unwrap();
             if ph.get_type().unwrap() == xmas_elf::program::Type::Dynamic {
                 is_dynamic = true;
-                unimplemented!();
+                //unimplemented!();
             } else if ph.get_type().unwrap() == xmas_elf::program::Type::Load {
                 let start: VirtAddr = (ph.virtual_addr() as usize).into();
                 let end: VirtAddr = ((ph.virtual_addr() + ph.mem_size()) as usize).into();
@@ -650,7 +651,6 @@ impl MemorySet {
                 if ph_flags.is_write() {map_prot |= MapProt::WRITE;}
                 if ph_flags.is_execute() {map_prot |= MapProt::EXEC;}
                 let lazy = ph.file_size() == ph.mem_size();
-                //let lazy = false;
                 if lazy {
                     let map_area = MapArea::new_pro(
                         start, end, MapType::Framed, map_prot, Some(elf_file.clone()), ph.offset() as usize, false);
@@ -703,7 +703,7 @@ impl MemorySet {
         memory_set.program_end = user_stack_top.into();
         memory_set.current_end = memory_set.program_end;
         
-        if false {
+        if is_dynamic {
             memory_set.map_linker();
             unsafe {
                 auxv.push(Aux{aux_type: AT_BASE, value: LINKER_BASE_VA});    //动态连接器段的偏移
@@ -804,19 +804,19 @@ impl MemorySet {
             );
 
             memory_set.areas.push(new_area);
-       }
+        }
 
-       memory_set.pagetable.copy_from_existed(&mut existed.pagetable);
-       let task = get_current_task().unwrap();
-       let mut swap = task.swap.lock();
-       for (vpn, _) in swap.list.iter() {
+        memory_set.pagetable.copy_from_existed(&mut existed.pagetable);
+        let task = get_current_task().unwrap();
+        let mut swap = task.swap.lock();
+        for (vpn, _) in swap.list.iter() {
             let pte1 = existed.pagetable.find_pte(*vpn).unwrap();
             let pte = memory_set.pagetable.find_pte(*vpn).unwrap();
             pte.set_flag(pte1.flags());
-       }
+        }
 
 
-       memory_set
+        memory_set
     }
 
     pub fn activate(&self) {
@@ -874,6 +874,7 @@ impl MemorySet {
 
     pub fn load_linker(&mut self) -> Result<(VirtAddr,VirtAddr), Error> {
         let path = Path::from_string(String::from("./libc.so"))?;
+        //let path = Path::from_string(String::from("./lib/ld-linux-riscv64-lp64d.so.1"))?;
         let file = open(path,FileOpenMode::SYS)?;
         let size = file.get_size()?;
         let data = file.read(size)?;
@@ -902,8 +903,10 @@ impl MemorySet {
                         if ph_flags.is_read() {map_prot |= MapProt::READ;}
                         if ph_flags.is_write() {map_prot |= MapProt::WRITE;}
                         if ph_flags.is_execute() {map_prot |= MapProt::EXEC;}
-        
-                        let map_area = MapArea::new(base_va + start,base_va + end, MapType::Framed, map_prot);
+                        
+                        //
+                        let mut map_area = MapArea::new(base_va + start,base_va + end, MapType::Framed, map_prot);
+                        //map_area.file = Some(file.clone());
                         self.push(
                             offset,
                             map_area,
@@ -911,6 +914,7 @@ impl MemorySet {
                         )
                     }
                 }
+                println!("base_va:{:x},entry_va:{:x}",base_va.0 as usize,elf.header.pt2.entry_point() as usize);
                 return Ok((base_va, VirtAddr::from(elf.header.pt2.entry_point() as usize)));
             }
             None =>{
@@ -921,7 +925,6 @@ impl MemorySet {
     }
 
     pub fn map_linker(&mut self) {
-        panic!();
         let dynamic_linker_vpn_start = VirtAddr::from(DYNAMIC_LINKER).floor_page_num();
         let dynamic_linker_vpn_end = VirtAddr::from(SIG_DEFAULT_HANDLER).floor_page_num();
         let mut kernel_space = &mut *KERNEL_SPACE.lock();
@@ -937,11 +940,15 @@ impl MemorySet {
                     area.offset,
                     false,
                 );
-                // for (vpn,frame) in area.frames.iter(){
-                //     new_area.frames.insert(*vpn, frame.clone());
-                //     self.pagetable.map(*vpn,frame.inner.ppn,new_area.map_prot & !MapProt::WRITE);
-                //     kernel_space.pagetable.map(*vpn,frame.inner.ppn,new_area.map_prot & !MapProt::WRITE);
-                // }
+                for vpn in area.vpn_range {
+                    if let Some(frame) = kernel_space.pagetable.data_frames.get_mut(&vpn){
+                        self.pagetable.data_frames.insert(vpn, frame.clone());
+                        self.pagetable.map(vpn,frame.inner.ppn,new_area.map_prot);
+
+                        let pte = self.pagetable.find_pte(vpn).unwrap();
+                        pte.set_cow();
+                    }
+                }
                 self.areas.push(new_area);
             }
         }
@@ -1042,8 +1049,8 @@ impl MemorySet {
                 if let Ok(data) = file.read(PAGE_SIZE) {
                     let ppn = area.map_one(vpn, pagetable)
                         .or_else(|_| Err("run out of memory"))?;
-                    trace!("enter herere");
-                    ppn.get_byte_array().copy_from_slice(data.as_slice());
+                    //trace!("enter herere");
+                    ppn.get_byte_array()[0..data.len()].copy_from_slice(data.as_slice());
                     return Ok(ppn);
                 } else {
                     return Err("lazy_alloc: fail to read file");

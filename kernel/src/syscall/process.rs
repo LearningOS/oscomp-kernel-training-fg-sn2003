@@ -1,3 +1,4 @@
+use core::char::MAX;
 use core::sync::atomic::Ordering;
 
 use alloc::string::{String, ToString};
@@ -79,7 +80,7 @@ pub fn sys_clone(
     let flags = flags & !0xff;
     let flags = CloneFlags::from_bits(flags as u32).ok_or(Error::EINVAL)?;
 
-    trace!("sys_clone: flags = {:?}, stack_addr = {:x}, ptid = {:x?}, tls = {:x?}, ctid = {:x?}", flags, stack_addr, ptid, tls, ctid);
+    warn!("sys_clone: flags = {:?}, stack_addr = {:x}, ptid = {:x?}, tls = {:x?}, ctid = {:x?}", flags, stack_addr, ptid, tls, ctid);
     let current = get_current_task().unwrap();
     let new_task = current
         .copy_process(flags)?;
@@ -90,6 +91,7 @@ pub fn sys_clone(
         assert!(stack_addr != 0);
         current.get_thread_group().add_task(Arc::clone(&new_task));
     }
+
 
     /* 设置tid */
     let mut clear_child_tid: usize = 0;
@@ -130,6 +132,7 @@ pub fn sys_execve(
     let token = task.get_user_token();
     let path = Path::from_string(translate_str(token, path)?)?;
     let filename = path.last().clone();
+    trace!("sys_exec: path = {:?}, argv = {:?}", path, path);
 
     /* 获取 argv 和 envp */
     fn get_string_vector(token: usize, mut addr: *const usize) -> Result<Vec<String>, Error> {
@@ -150,24 +153,17 @@ pub fn sys_execve(
     }
     
     let mut argv_strings = get_string_vector(token, argv)?;
-    println!("sys_exec: path = {:?}, argv = {:?}", path, argv_strings);
-
-    //temp(为了方便，在修改改变参数)
+    //temp
     if let Some(string) = argv_strings.get(1) {
         if string == "lmdd" {
-            argv_strings[4] = String::from("move=1m");      //645m太大了
+            argv_strings[4] = String::from("move=1m");
         } else if string == "bw_pipe" {
-            //只是节约时间，不影响最终结果(反正超不过基准值)
-            argv_strings.append(&mut vec!["-M".to_string(), "10k".to_string(), "-m".to_string(), "1k".to_string()]) 
-        } else if string == "lat_fs" {
-            return Err(Error::EACCES);
-        } else if string == "lat_proc" {
-            return Err(Error::EACCES);
+            argv_strings.append(&mut vec!["-M".to_string(), "10k".to_string(), "-m".to_string(), "1k".to_string()])
         }
     }
 
     let mut envp_strings = get_string_vector(token, envp)?;
-    envp_strings.push(String::from("LD_LIBRARY_PATH=."));
+    envp_strings.push(String::from("LD_LIBRARY_PATH=/"));
     envp_strings.push(String::from("SHELL=/busybox"));
     envp_strings.push(String::from("PWD=/"));
     envp_strings.push(String::from("USER=root"));
@@ -181,7 +177,8 @@ pub fn sys_execve(
     envp_strings.push(String::from("_=busybox"));
     envp_strings.push(String::from("LOGNAME=root"));
     envp_strings.push(String::from("HOME=/"));
-    envp_strings.push(String::from("PATH=/"));
+    envp_strings.push(String::from("PATH=/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"));
+    envp_strings.push(String::from("PS1=\\h:\\w\\$"));
 
     /* 打开可执行文件 */
     let file;
@@ -238,25 +235,40 @@ pub fn sys_futex(
     op: i32, 
     val1: usize,    
     val2: usize, 
-    uaddr2: *const u32  /* or *const Timespec when op is FUTEX_REQUEUE*/
+    uaddr2: *const u32  /* or *const Timespec when op is FUTEX_REQUEUE*/,
+    val3: u32,
 ) -> Result<isize, Error> {
-    
+    const FUTEX_PRIVATE_FLAG: i32 = 128;
+
     const FUTEX_WAIT: i32 = 0;
     const FUTEX_WAKE: i32 = 1;
     const FUTEX_REQUEUE: i32 = 3;
-    const FUTEX_PRIVATE_FLAG: i32 = 128;
+    const FUTEX_WAIT_BITSET: i32 = 9;
+    const FUTEX_WAKE_BITSET: i32 = 10;   
+
     const FUTEX_WAIT_PRIVATE: i32 = FUTEX_WAIT | FUTEX_PRIVATE_FLAG;
     const FUTEX_WAKE_PRIVATE: i32 = FUTEX_WAKE | FUTEX_PRIVATE_FLAG;
     const FUTEX_REQUEUE_PRIVATE: i32 = FUTEX_REQUEUE | FUTEX_PRIVATE_FLAG;
+    const FUTEX_WAIT_BITSET_PRIVATE: i32 = FUTEX_WAIT_BITSET | FUTEX_PRIVATE_FLAG;
+    const FUTEX_WAKE_BITSET_PRIVATE: i32 = FUTEX_WAKE_BITSET | FUTEX_PRIVATE_FLAG;
+
     
-    trace!("sys_futex: uaddr1 = {:x?}, uaddr2 = {:x?}, val1 = {:x}, val2 = {:x}, op = {}", 
+    error!("sys_futex: uaddr1 = {:x?}, uaddr2 = {:x?}, val1 = {:x}, val2 = {:x}, op = {}", 
         uaddr1, uaddr2, val1, val2, op);
         
     match op {
-        FUTEX_WAIT | FUTEX_WAIT_PRIVATE => {
-            do_futex_wait(uaddr1, val1 as u32, val2 as *const Timespec)
+        FUTEX_WAIT | FUTEX_WAIT_PRIVATE
+        | FUTEX_WAIT_BITSET | FUTEX_WAIT_BITSET_PRIVATE  => {
+            if op == FUTEX_WAIT_BITSET || op == FUTEX_WAIT_BITSET_PRIVATE {
+                assert!(val3 == u32::MAX);
+            }
+            do_futex_wait(uaddr1, val1 as u32, val2 as *const Timespec, val3)
         }
-        FUTEX_WAKE | FUTEX_WAKE_PRIVATE => {
+        FUTEX_WAKE | FUTEX_WAKE_PRIVATE 
+        | FUTEX_WAKE_BITSET | FUTEX_WAKE_BITSET_PRIVATE => {
+            if op == FUTEX_WAKE_BITSET || op == FUTEX_WAKE_BITSET_PRIVATE {
+                assert!(val3 == u32::MAX);
+            }
             do_futex_wake(uaddr1, val1 as u32)
         }
         FUTEX_REQUEUE | FUTEX_REQUEUE_PRIVATE => {
@@ -268,7 +280,12 @@ pub fn sys_futex(
     }
 }
 
-fn do_futex_wait(addr: *const u32, val1: u32, time: *const Timespec) -> Result<isize, Error> {
+fn do_futex_wait(
+    addr: *const u32, 
+    val1: u32, 
+    time: *const Timespec,
+    mask: u32,
+) -> Result<isize, Error> {
     let task = get_current_task().unwrap();
     let token = task.get_user_token();
 
@@ -276,7 +293,7 @@ fn do_futex_wait(addr: *const u32, val1: u32, time: *const Timespec) -> Result<i
     let mut futex_list = task.get_futex_list();
     copyin(token, &mut val, addr)?;
 
-    trace!("do_futex_wait: val = {:x}, val1 = {:x}, time = {:x?}", val, val1, time);
+    error!("do_futex_wait: val = {:x}, val1 = {:x}, time = {:x?}", val, val1, time);
     if val != val1 {
         return Err(Error::EAGAIN);
     } else {
@@ -287,14 +304,13 @@ fn do_futex_wait(addr: *const u32, val1: u32, time: *const Timespec) -> Result<i
         } 
         futex_list.add_task(task.clone(), addr as usize);
         let chan = *task.get_channel();
-        trace!("do_futex_wait: current_task, tid = {} is ready to sleep", task.tid);
+        error!("do_futex_wait: current_task, tid = {} is ready to sleep", task.tid);
         sleep_current(chan, futex_list);
         drop(task);
         let task = get_current_task().unwrap();
-        trace!("do_futex_wait: task:{} is woken", task.tid);
+        error!("do_futex_wait: task:{} is woken", task.tid);
         if task.interrupted.load(Ordering::Relaxed) {
             /* 如果被中断了，需要还原futex_list */
-            //todo!();
             task.interrupted.store(false, Ordering::Release);
             let mut futex_list = task.get_futex_list();
             if let Some(queue) = futex_list.list.get_mut(&(addr as usize)) {
@@ -311,7 +327,7 @@ fn do_futex_wait(addr: *const u32, val1: u32, time: *const Timespec) -> Result<i
 }
 
 fn do_futex_wake(addr: *const u32, val: u32) -> Result<isize, Error> {
-    trace!("do_futex_wake: val = {}", val);
+    error!("do_futex_wake: val = {}", val);
     let task = get_current_task().unwrap();
     let mut futex_list = task.get_futex_list();
     let num = futex_list.wake(addr as usize, val as usize);
@@ -319,7 +335,7 @@ fn do_futex_wake(addr: *const u32, val: u32) -> Result<isize, Error> {
 }
 
 fn do_futex_requeue(addr1: *const u32, addr2: *const u32, val1: u32, val2: u32) -> Result<isize, Error> {
-    trace!("do_futex_requeue: val1 = {}, val2 = {}", val1, val2);
+    error!("do_futex_requeue: val1 = {}, val2 = {}", val1, val2);
     let task = get_current_task().unwrap();
     let num = task.get_futex_list().requeue(addr1 as usize, addr2 as usize, 
         val1 as usize, val2 as usize);
@@ -359,12 +375,7 @@ pub fn sys_wait4(pid: i32, exit_code_ptr: *mut i32, _options: i32) -> Result<isi
         
         if let Some(child_task) = zombie {
             if Arc::strong_count(&child_task) != 1 {
-                /* 如果是多核，属于正常现象 */
-                // if Arc::strong_count(&child_task) != 1 {
-                //     println!("kernel_panic_wait: child_task tid = {}, ref_count = {}", 
-                //         child_task.tid, Arc::strong_count(&child_task));
-                //     TASK_MANAGER.lock().debug_print();
-                // }
+
             }
             task.time_info.lock().update_time_child_exit(&child_task.time_info.lock());
             let found_pid = child_task.get_pid();
@@ -377,10 +388,10 @@ pub fn sys_wait4(pid: i32, exit_code_ptr: *mut i32, _options: i32) -> Result<isi
             return Ok(found_pid as isize)   
         } else {
             drop(children);
-            //let chan = task.get_channel();
+
             drop(task);
             suspend_current();
-            //sleep_current(*chan, chan);
+
         }    
     }
 }

@@ -92,7 +92,6 @@ impl File for Fat32File {
         }
         let len = dirent.write_at(inner.cursor, data.as_slice())?;
         inner.cursor += len;
-        info!("fat32write: len = {:x}", len);
         drop(dirent);
         Ok(len)
     }
@@ -112,13 +111,11 @@ impl File for Fat32File {
         }
         let len = dirent.read_to_buffer(inner.cursor, buf)?;
         inner.cursor += len;
-        info!("fat32write: len = {:x}", len);
         Ok(len)
     }
 
     fn write_from_buffer(&self, buf: MemBuffer) -> Result<usize, Error> {
         assert!(self.writable());
-        info!("fat32file_write_buffer");
         if self.file_type != FileType::RegularFile {
             warn!("fat32file_write: this is not a regular file");
             return Err(Error::EACCES);
@@ -131,7 +128,6 @@ impl File for Fat32File {
         }
         let len = dirent.write_from_buffer(inner.cursor, buf)?;
         inner.cursor += len;
-        info!("fat32write: len = {:x}", len);
         Ok(len)
     }
 
@@ -199,7 +195,7 @@ impl File for Fat32File {
         let fstat = FileStat {
             st_dev: fs.block_file.get_id() as u64,
             st_ino: dirent.start_cluster as u64,
-            st_mode: st_mode as u32,
+            st_mode: st_mode as u32 | 0o7777,
             st_nlink:   nlink,  //fat32不支持
             st_uid:     0,      //fat32不支持
             st_gid:     0,      //fat32不支持
@@ -212,7 +208,11 @@ impl File for Fat32File {
             st_mtime_sec : dirent.mtime.tv_sec as _,  
             st_mtime_nsec: dirent.mtime.tv_nsec as _,   
             st_ctime_sec : dirent.ctime.tv_sec as _,  
-            st_ctime_nsec: dirent.ctime.tv_nsec as _,  
+            st_ctime_nsec: dirent.ctime.tv_nsec as _,
+            // st_rdev: 0,
+            // __pad1:0,
+            // __pad2:0,
+            // __pad3:0  
         };
         Ok(fstat)
     }
@@ -309,11 +309,11 @@ impl DirFile for Fat32File {
         trace!("fat32_dirfile_getdents");
         let dirent_read = self.dirent.read();
         /* 目前的实现要求一次性读完整个目录 */
-        if self.seek(0, SeekMode::CUR)? != 0 {
-            return Ok(Vec::new())
-        }
-        self.seek(1, SeekMode::SET)?;
-        let dirents = dirent_read.get_dirents()?;
+        
+        let mut inner = self.inner.lock();
+        let dirents = dirent_read.get_dirents(&mut inner)?;
+        drop(inner);
+        
         let mut dentrys  = Vec::new();
         
         /* 将fat32的Dirent 转化成kernel通用的Dentry */

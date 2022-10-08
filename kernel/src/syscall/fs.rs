@@ -23,7 +23,7 @@ use spin::Mutex;
 use core::arch::asm;
 use core::mem::size_of;
 use core::num::NonZeroI16;
-use core::usize;
+use core::{usize, panic};
 use super::time::{Timespec, Timeval};
 
 pub const AT_FDCWD: i32 = -100;
@@ -39,8 +39,8 @@ pub struct Iovec {
 #[derive(Clone, Copy, Debug, Default)]
 pub struct Pollfd {
     fd: i32,
-    events: i16,
-    revents: i16,
+    events: u16,
+    revents: u16,
 }
 
 
@@ -126,7 +126,7 @@ pub fn sys_fcntl(fd: u32, request: u32, arg: usize) -> Result<isize, Error> {
     match request {
         //Set the file descriptor flags to the value specified by arg
         F_SETFD => {
-            warn!("sys_fcntl: unsupported request: F_SETFD, return default value: 0");
+            info!("sys_fcntl: unsupported request: F_SETFD, return default value: 0");
             return Ok(0)
         }
         F_DUPFD_CLOEXEC => {
@@ -144,7 +144,7 @@ pub fn sys_fcntl(fd: u32, request: u32, arg: usize) -> Result<isize, Error> {
             return Err(Error::EMFILE)
         }
         _ => {
-            warn!("sys_fcntl: unsupported request: {}!, return 0", request);
+            info!("sys_fcntl: unsupported request: {}!, return 0", request);
             return Ok(0)
         }
     }
@@ -250,7 +250,7 @@ struct DirentFront {
 
 //tofix
 pub fn sys_getdents(fd: u32, buf: *mut u8, len: usize) -> Result<isize, Error> {
-    info!("sys_getdents: fd = {}, len = {}", fd, len);
+    //println!("sys_getdents: fd = {}, len = {}", fd, len);
     let current = get_current_task().unwrap();
     
     /* 获得dentrys */
@@ -457,9 +457,7 @@ pub fn sys_fsync() -> Result<isize, Error> {
 pub fn sys_umask(umask: usize) -> Result<isize, Error> {
     return Ok(0)
 }
-pub static STDIO_BUF: Lazy<Mutex<Vec<u8>>> = Lazy::new(||{
-    Mutex::new(Vec::new())
-});
+
 
 // from rcore
 // tofix: add license
@@ -530,9 +528,12 @@ pub fn sys_pselect(
 
     let mut non_block = false;
 
-    let timeout = get_arg(token, timeout_ptr)?;
+    let mut timeout = get_arg(token, timeout_ptr)?;
     if timeout.is_none() || timeout.unwrap() == Timespec::ZERO {
         non_block = true;
+    }
+    if timeout.is_none() {
+        timeout = Some(Timespec::ZERO);
     }
     let timeout = timeout.unwrap() + Timespec::now();
 
@@ -592,27 +593,69 @@ pub fn sys_ppoll(
     _sigmask: *const usize) -> Result<isize, Error> 
 {   
     return Ok(1);
+    const POLLIN: u16 = 0x01;
+    const POLLHUP: u16 = 0x10;
+
     let task = get_current_task().unwrap();
     let token = task.get_user_token();
     let mut pollfd_vec = Vec::new();
     let mut pollfd = Pollfd::default();
+    
+    trace!("timeout = {:x?}", timeout);
 
     for i in 0..nfds {
         unsafe{ copyin(token, &mut pollfd, fds.add(i))? }
-        pollfd_vec.push(pollfd);    
+        pollfd_vec.push(pollfd);   
     }
-    trace!("sys_ppoll: nfds = {}, timeout = {:x?}", nfds, timeout);
 
-    let file = task.get_file(0)?;
+    let time = {
+        if !timeout.is_null() {
+            let mut time = Timespec::ZERO;
+            copyin(token, &mut time, timeout)?;
+            time + Timespec::now()
+        } else {
+            Timespec {
+                tv_sec: isize::MAX,
+                tv_nsec: 0,
+            }
+        }
+    };
+    trace!("time = {:?}, pollfd_vec = {:?}", time, pollfd_vec);
 
-    match file.read(1) {
-        Ok(data) => {
-            let mut buf = STDIO_BUF.lock();
-            buf.append(&mut data.clone());
-            return Ok(1)
-        },
-        Err(err) => return Err(err)
+    let mut ready = 0;
+
+    loop {
+        let fd_table = task.get_fd_table();
+        for i in 0..nfds {
+            let poll = &mut pollfd_vec[i];
+            let file = fd_table.get_file(poll.fd as u32)?;
+            if poll.events == POLLIN {
+                if file.poll(PollType::READ)? {
+                    poll.revents = POLLIN;
+                    ready += 1;
+                } else {
+                    poll.revents &= !POLLIN;
+                }
+            } 
+        }
+        if ready != 0 {
+            break;
+        }
+        if time.pass() {
+            break;
+        }
+
+        drop(fd_table);
+        suspend_current();
     }
+
+    trace!("pollfd_vec = {:?}", pollfd_vec);
+    for i in 0..nfds {
+        unsafe{ copyout(token, fds.add(i), &mut pollfd_vec[i])?; }
+    }
+
+
+    return Ok(ready);
 }
 
 
@@ -691,9 +734,10 @@ pub fn sys_readlinkat(
 ) -> Result<isize, Error> {
     let token =get_current_user_token();
     let path = translate_str(token, path)?;
-    info!("dirfd = {}, path = {}", dirfd, path);
+
     if path.as_str() != "/proc/self/exe" {
         /* proc文件系统还未实现 */
+        return Ok(0);
         unimplemented!();
     } else {
         let mut string = String::from("/lmbench_all\0");
@@ -731,7 +775,7 @@ pub fn sys_mkdir(fd: i32, path: *const u8, _mode: u32) -> Result<isize, Error> {
 
     /* 从用户空间获取path */
     let path = translate_str(token, path)?;
-    info!("sys_mkdir: fd = {}, path = {}", fd, path);
+    trace!("sys_mkdir: fd = {}, path = {}", fd, path);
 
     /* 创建目录 */
     let (root_file, path) = get_file(fd, path)?;
@@ -794,7 +838,7 @@ pub fn sys_faccessat(fd: i32, path: *const u8, mode: u32, _flag: u32) -> Result<
 }
 
 pub fn sys_fstat(fd: u32, kst: *mut FileStat) -> Result<isize, Error> {
-    trace!("sys_fstat: fd = {}", fd);
+
     /* 获取fd指定的file */
     let current = get_current_task().unwrap();
     let token = current.get_user_token();
@@ -802,7 +846,7 @@ pub fn sys_fstat(fd: u32, kst: *mut FileStat) -> Result<isize, Error> {
 
     /* 获取fstat */
     let fstat = file.read_stat()?;
-    trace!("fstat = {:?}", fstat);
+
     /* 将fstat复制到用户地址空间 */
     copyout(token, kst, &fstat)?;
     Ok(0)
@@ -813,12 +857,12 @@ pub fn sys_newfstatat(fd: i32, path: *const u8, buf: *mut FileStat, _flag: u32)
     let token = get_current_user_token();
 
     let path = translate_str(token, path)?;
-    trace!("sys_newfstatat: fd = {}, path = {:?}, flag = {:x}", fd , path, _flag);
+
 
     let (root_file, path) = get_file(fd, path)?;
     let file = open_at(root_file, path, FileOpenMode::SYS)?;
     let fstat = file.read_stat()?;
-    trace!("sys_newfstatat: fstat = {:?}", fstat);
+
     /* 将fstat复制到用户地址空间 */
     copyout(token, buf, &fstat)?;
     Ok(0)
@@ -900,6 +944,7 @@ pub fn get_file(
         trace!("get_file: from relative path");
         //拼接cwd和path
         let mut abs_path = current.get_fs_info().cwd.to_string();
+        abs_path.push('/');
         abs_path.push_str(path.as_str());
         let file = open("/".into(), FileOpenMode::SYS)?; 
         return Ok((file, Path::from_string(abs_path)?));

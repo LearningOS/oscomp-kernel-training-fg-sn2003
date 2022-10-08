@@ -13,7 +13,7 @@ bin: elf
 	@$(foreach elf, $(ELFS), $(OBJCOPY) $(elf) --strip-all -O binary $(patsubst $(TARGET_DIR)/%, $(TARGET_DIR)/%.bin, $(elf));)
 
 elf: 
-	@cargo build --release
+	@cargo build --offline --release
 
 clean:
 	@cargo clean

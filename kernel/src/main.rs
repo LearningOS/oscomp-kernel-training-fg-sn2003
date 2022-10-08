@@ -75,7 +75,7 @@ fn start_other_harts(hartid: usize) {
 #[no_mangle]
 pub fn rust_main(hartid: usize, device_tree: usize) {
     intr_off();
-    if hartid == 0 {
+    if true {
         trap::set_kernel_trap_entry();
         memory::clear_bss();
         memory::init_heap_allocator();
@@ -83,7 +83,7 @@ pub fn rust_main(hartid: usize, device_tree: usize) {
         utils::logger::init();        
         //driver::device_tree::init(device_tree);
         memory::kernel_space_activate();
-        //memory::load_dynamic_linker();
+        memory::load_dynamic_linker();
         fs::fs_init();
         proc::add_initproc();
         //start_other_harts(hartid);    /* 目前多核不完善 */

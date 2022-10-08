@@ -64,7 +64,7 @@ pub trait File: Send + Sync {
         unimplemented!();
     }
     fn seek(&self, _pos : usize, _mode: SeekMode) -> Result<isize, Error> {
-        unimplemented!();
+        Ok(0)
     }
     fn get_size(&self) -> Result<usize, Error> {
         unimplemented!();

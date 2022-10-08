@@ -60,11 +60,7 @@ pub static PROCESSOR_LIST: Lazy<Vec<UPSafeCell<Processor>>> = Lazy::new(||{
 #[no_mangle]
 #[inline(always)]
 pub fn get_hartid() -> usize {
-    let mut hartid: usize;
-    unsafe {
-        asm!("mv {}, tp", out(reg) hartid);
-    }
-    hartid
+    0
 }
 
 pub fn take_current_task() -> Option<Arc<TaskControlBlock>> {
@@ -116,16 +112,9 @@ pub fn scheduler() {
         }
 
         if let Some(task) = fetch_task() {
-            // if task.is_zombie() {
-            //     unimplemented!();
-            //     free_current_in_running_list();
-            //     drop(task);
-            //     continue;
-            // }
             let switch_task_cx_ptr = processor.get_idle_task_cx_ptr();
             let task_info = task.get_task_info();
             let next_task_cx_ptr = &task_info.context as *const TaskContext;
-            task.time_info.lock().timestamp_enter_smode = get_time() as u64;
             task.set_status(TaskStatus::RUNNING);
 
             drop(task_info);

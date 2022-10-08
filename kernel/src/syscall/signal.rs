@@ -1,6 +1,6 @@
 use crate::memory::{copyout, copyin};
 use crate::proc::{get_current_task, get_current_user_token, get_task_by_pid,get_task_by_tid,get_current_trap_context};
-pub use crate::proc::{Sigaction,UContext,SignalContext,SigInfo};
+pub use crate::proc::{Sigaction,UContext,SignalContext,SigInfo,SiganlStack_info};
 use crate::proc::{SIGKILL,SIGSTOP};
 use crate::utils::Error;
 use core::ptr;
@@ -83,7 +83,7 @@ pub fn sys_sigtimedwait() -> Result<isize, Error> {
 
 //向pid指定的进程发送信号
 pub fn sys_kill(pid: i32, signum: usize) -> Result<isize, Error> {
-    trace!("sys_kill: pid = {}, signum = {}", pid, signum);
+    println!("sys_kill: pid = {}, signum = {}", pid, signum);
     let task = match pid {
         0 => get_current_task().unwrap(),
         _ => get_task_by_pid(pid).ok_or(Error::ESRCH)?,
@@ -94,7 +94,7 @@ pub fn sys_kill(pid: i32, signum: usize) -> Result<isize, Error> {
 
 //向tid指定的进程发送信号
 pub fn sys_tkill(tid: i32, signum: usize) -> Result<isize, Error>{
-    trace!("sys_tkill: tid = {}, signum = {}", tid, signum);
+
     let task = get_task_by_tid(tid).ok_or(Error::ESRCH)?;
     task.t_pending.lock().pending_signal(signum);
     Ok(0)
@@ -112,6 +112,7 @@ pub fn sys_tgkill(tgid: i32, tid: i32, signum: usize) -> Result<isize, Error> {
 }
 
 pub fn sys_sigreturn() -> Result<isize, Error> {
+    //panic!();
     //还原被保存的signal_context
     let task =  get_current_task().unwrap();
     let user_token = task.get_user_token();
@@ -122,6 +123,7 @@ pub fn sys_sigreturn() -> Result<isize, Error> {
     
     let trap_cx = task.get_trap_cx();
     //恢复上下文
+
     trap_cx.x = signal_context.ucontext.uc_mcontext.greps;
     trap_cx.x[0] = 0;
     trap_cx.sepc = signal_context.pc();
@@ -131,3 +133,14 @@ pub fn sys_sigreturn() -> Result<isize, Error> {
     Ok(0)
 }
 
+
+
+//替换信号处理时的上下文
+pub fn sys_sigaltstack(signal_stack:usize,old_signal_stack:usize) -> Result<isize,Error> {
+
+    let task =  get_current_task().unwrap();
+    let user_token = task.get_user_token();
+    let mut signal_context_ptr = task.signal_context_ptr.lock();
+    let mut signal_context = SignalContext::new(0);
+    Ok(0)
+}

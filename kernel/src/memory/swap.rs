@@ -93,7 +93,6 @@ pub fn pick_task_to_swap() -> Option<Arc<TaskControlBlock>> {
 
 pub fn swap_out_task() -> Result<(), Error>{
     let task = pick_task_to_swap().ok_or(Error::ENOMEM).unwrap();
-    //println!("                swap out task, tid = {}", task.tid);
     let mut memory_set = task.get_memory();
     let mut swap = task.swap.lock();
     let pagetable = &mut memory_set.pagetable;

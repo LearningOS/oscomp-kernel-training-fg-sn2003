@@ -65,6 +65,7 @@ pub const SIGINFO    :u32   = 0x00000004;//目前只用到这个
 pub const ONSTACK    :usize = 0x08000000;
 pub const RESTART    :usize = 0x10000000;
 pub const NODEFER    :usize = 0x40000000;
+pub const RESTORER   :u32   = 0x04000000;
 pub const UNSUPPORTED:usize = 0x00000400;
 pub const RESETHAND  :usize = 0x80000000;
 
@@ -140,7 +141,7 @@ pub struct Sigaction {
     pub sa_handler: usize,      //默认信号处理函数
     pub sa_flags: u32,        //标志位
     pub sa_mask: usize,         //信号处理函数执行期间的mask码
-    //pub sa_restorer: usize,     //也许用不上,保存用户进程trampoline地址?
+    pub sa_restorer: usize,     //用户自定义的函数地址，用于在信号处理函数执行完后执行善后工作
     //pub sig_info_ptr: usize,
 }
 impl Sigaction {
@@ -149,10 +150,15 @@ impl Sigaction {
         sa_mask: usize,
         sa_flags: u32,
     )->Sigaction{
+        extern "C"{
+            fn __user_call_sigreturn();
+            fn signal_default_handlers();
+        }
         Sigaction{
             sa_handler,
             sa_mask,
             sa_flags,
+            sa_restorer: __user_call_sigreturn as usize - signal_default_handlers as usize + SIG_DEFAULT_HANDLER,
         }
     }
 }
@@ -250,6 +256,14 @@ impl SignalContext {
     }
 }
 
+//一个反映信号栈相关信息的数据结构
+#[repr(C)]
+#[derive(Clone, Copy, Debug)]
+pub struct SiganlStack_info{
+    pub ss_sp: usize,//当前信号栈栈顶
+    pub ss_flags: u32,
+    pub ss_size: usize,
+}
 
 
 pub fn signal_sigaction_init() -> BTreeMap<usize,Sigaction>{

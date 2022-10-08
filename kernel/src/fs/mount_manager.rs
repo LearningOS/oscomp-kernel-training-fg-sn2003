@@ -116,7 +116,6 @@ impl MountManager {
             if let Ok(index) = current.get_index() {
                 let map = self.map.read(); 
                 if map.contains_key(&index){
-                    info!("open_path: enter mount");
                     let vfs = map.get(&index).unwrap();
                     current = vfs.root_dir(FileOpenMode::SYS)?.as_file();
                 }
@@ -144,7 +143,6 @@ impl MountManager {
         if let Ok(index) = current.get_index() {
             let map = self.map.read();
             if map.contains_key(&index){
-                info!("open_path: enter mount");
                 let vfs = map.get(&index).unwrap();
                 current = vfs.root_dir(FileOpenMode::SYS)?.as_file();
             }

@@ -1,5 +1,5 @@
 use core::sync::atomic::{AtomicI32, AtomicU8, AtomicU64, Ordering};
-use _core::sync::atomic::{AtomicBool, AtomicUsize};
+use _core::{sync::atomic::{AtomicBool, AtomicUsize}, panic};
 use alloc::{
     sync::{Arc, Weak},
     vec::Vec,
@@ -61,6 +61,7 @@ bitflags! {
          const CLONE_DETACHED = 0x00400000;
         /* set the TID in the child */
          const SETTID = 0x01000000;
+         const CLONE_VFORK	 = 0x00004000;
         }
 }
 
@@ -477,7 +478,9 @@ impl TaskControlBlock {
         }
         
         let signo = match self.get_signal() {
-            Some(signo) => signo,
+            Some(signo) => {
+                signo
+            }
             None => return
         };
 
@@ -520,13 +523,14 @@ impl TaskControlBlock {
             _=>{
                 trap_context.x[10] = signo;                 //信号序号作为处理函数的唯一输入参数
 
-                if sigaction.sa_flags & SIGINFO !=0 {
+                if sigaction.sa_flags & SIGINFO != 0 {
                     trap_context.x[11] = siginfo_addr;      //a1寄存器设置为指向siginfo的指针
                     trap_context.x[12] = ucontext_addr;     //a2寄存器设置为指向ucontext的指针
                 }
                 trap_context.sepc = sigaction.sa_handler;   //设置函数入口地址
             }
         }
+
         trap_context.x[1] = __user_call_sigreturn as usize - signal_default_handlers as usize + SIG_DEFAULT_HANDLER; //计算__user_call_sigreturn虚拟地址
         info!("ready to handle signal");
     }
@@ -725,7 +729,6 @@ impl TaskControlBlock {
     /* 重新设置trapframe内容 */
     let mut info = self.task_info.lock();
     info.trap_cx_ppn = trap_cx_ppn;
-    
     let trap_cx = info.get_trap_cx();
     *trap_cx = TrapContext::init(
         entry_point,
@@ -826,9 +829,11 @@ impl TaskControlBlock {
             .unwrap()
             .ppn();
         if clone_flags.contains(CloneFlags::THREAD) {
-            let trap_cx = trap_cx_ppn.get_mut();
-            *trap_cx = *self.get_trap_cx();
+            // let trap_cx = trap_cx_ppn.get_mut();
+            // *trap_cx = *self.get_trap_cx();
         }
+        let trap_cx = trap_cx_ppn.get_mut();
+        *trap_cx = *self.get_trap_cx();
 
         let child_token = memory_set.token();
         drop(memory_set);

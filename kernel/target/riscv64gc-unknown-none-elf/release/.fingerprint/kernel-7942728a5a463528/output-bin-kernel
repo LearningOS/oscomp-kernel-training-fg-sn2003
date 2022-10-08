@@ -1,0 +1,3264 @@
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+error: error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+    fsd fa7 , 49*8(sp)
+ error:  instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+  ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)error: 
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+instruction requires the following: 'D' (Double-Precision Floating-Point)error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: 
+instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    error: ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+ instruction requires the following: 'D' (Double-Precision Floating-Point)  
+ ^
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^error: 
+instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    error: ^instruction requires the following: 'D' (Double-Precision Floating-Point)
+
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft0 , 32*8(sp)        
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fsd ft11, 63*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft0 , 32*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft1 , 33*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft2 , 34*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft3 , 35*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft4 , 36*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft5 , 37*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft6 , 38*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft7 , 39*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs0 , 40*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs1 , 41*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa0 , 42*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa1 , 43*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa2 , 44*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa3 , 45*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa4 , 46*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa5 , 47*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa6 , 48*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fa7 , 49*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs2 , 50*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs3 , 51*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs4 , 52*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs5 , 53*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs6 , 54*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs7 , 55*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs8 , 56*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs9 , 57*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs10, 58*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld fs11, 59*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft8 , 60*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft9 , 61*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft10, 62*8(sp)
+    ^
+error: instruction requires the following: 'D' (Double-Precision Floating-Point)
+    fld ft11, 63*8(sp)
+    ^

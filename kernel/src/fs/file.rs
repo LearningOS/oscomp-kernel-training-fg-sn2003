@@ -236,6 +236,7 @@ pub struct FileStat {
     // pub st_ctime_sec :u32,  
     // pub st_ctime_nsec:u32,  
     // pub __pad3  :u16,
+    
     pub st_dev  :u64,   /* ID of device containing file */
     //__pad1  :u32,
     pub st_ino  :u64,   /* Inode number */

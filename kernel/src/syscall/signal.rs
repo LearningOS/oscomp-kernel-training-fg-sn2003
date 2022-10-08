@@ -83,7 +83,7 @@ pub fn sys_sigtimedwait() -> Result<isize, Error> {
 
 //向pid指定的进程发送信号
 pub fn sys_kill(pid: i32, signum: usize) -> Result<isize, Error> {
-    println!("sys_kill: pid = {}, signum = {}", pid, signum);
+    trace!("sys_kill: pid = {}, signum = {}", pid, signum);
     let task = match pid {
         0 => get_current_task().unwrap(),
         _ => get_task_by_pid(pid).ok_or(Error::ESRCH)?,

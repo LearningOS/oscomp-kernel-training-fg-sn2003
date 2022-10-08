@@ -62,13 +62,13 @@ fn final_comp() {
 }
 
 fn run_libc_testcode() {
-    // let pid = fork();
-    // if pid == 0 {
-    //     exec("run-static.sh\0", vec!["run-static.sh\0"], Vec::new());
-    // } else {
-    //     let mut status: i32 = 0;
-    //     wait(&mut status);
-    // }
+    let pid = fork();
+    if pid == 0 {
+        exec("run-static.sh\0", vec!["run-static.sh\0"], Vec::new());
+    } else {
+        let mut status: i32 = 0;
+        wait(&mut status);
+    }
 
     let pid = fork();
     if pid == 0 {

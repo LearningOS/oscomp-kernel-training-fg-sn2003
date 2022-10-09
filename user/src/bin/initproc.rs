@@ -58,9 +58,9 @@ fn final_comp() {
     run_libc_testcode();
     run_lua_testcode();
     run_busybox_testcode();
-    run_lmbench_remain_tests();
-    lmbench_proxy();
-    //run_lmbench_testcode();
+    //run_lmbench_remain_tests();
+    //lmbench_proxy();
+    run_lmbench_testcode();
 }
 
 fn run_libc_testcode() {

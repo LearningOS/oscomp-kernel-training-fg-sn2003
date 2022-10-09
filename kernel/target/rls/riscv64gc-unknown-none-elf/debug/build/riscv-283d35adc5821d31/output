@@ -1,0 +1,4 @@
+cargo:rustc-link-lib=static=riscv
+cargo:rustc-link-search=/home/stellaris/operation_system/oskernel2022-oops/kernel/target/rls/riscv64gc-unknown-none-elf/debug/build/riscv-283d35adc5821d31/out
+cargo:rustc-cfg=riscv
+cargo:rustc-cfg=riscv64

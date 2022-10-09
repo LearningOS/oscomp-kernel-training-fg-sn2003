@@ -1,0 +1,4 @@
+cargo:rustc-link-lib=static=riscv
+cargo:rustc-link-search=/home/stellaris/operation_system/oscomp-kernel-training-fg-sn2003/kernel/target/riscv64gc-unknown-none-elf/release/build/riscv-5977861c335aa20a/out
+cargo:rustc-cfg=riscv
+cargo:rustc-cfg=riscv64

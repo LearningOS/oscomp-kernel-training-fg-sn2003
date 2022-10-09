@@ -1,0 +1,2 @@
+cargo:rustc-link-search=/home/stellaris/operation_system/oscomp-kernel-training-fg-sn2003/kernel/target/riscv64gc-unknown-none-elf/release/build/k210-pac-affef9735ca81ef6/out
+cargo:rerun-if-changed=memory-k210.x

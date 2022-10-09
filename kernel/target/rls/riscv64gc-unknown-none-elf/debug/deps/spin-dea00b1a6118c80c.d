@@ -1,0 +1,12 @@
+/home/stellaris/operation_system/oskernel2022-oops/kernel/target/rls/riscv64gc-unknown-none-elf/debug/deps/spin-dea00b1a6118c80c.rmeta: /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/lib.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/barrier.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/lazy.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/mutex.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/mutex/spin.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/mutex/ticket.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/once.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/rw_lock.rs
+
+/home/stellaris/operation_system/oskernel2022-oops/kernel/target/rls/riscv64gc-unknown-none-elf/debug/deps/spin-dea00b1a6118c80c.d: /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/lib.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/barrier.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/lazy.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/mutex.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/mutex/spin.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/mutex/ticket.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/once.rs /home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/rw_lock.rs
+
+/home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/lib.rs:
+/home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/barrier.rs:
+/home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/lazy.rs:
+/home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/mutex.rs:
+/home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/mutex/spin.rs:
+/home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/mutex/ticket.rs:
+/home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/once.rs:
+/home/stellaris/.cargo/registry/src/github.com-1ecc6299db9ec823/spin-0.7.1/src/rw_lock.rs:
